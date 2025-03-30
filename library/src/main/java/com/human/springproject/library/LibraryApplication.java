@@ -1,4 +1,4 @@
-package com.human.springproject.library.controller;
+package com.human.springproject.library;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
