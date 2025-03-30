@@ -1,4 +1,4 @@
-package com.human.springproject.library.controller;
+package com.human.springproject.library;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -7,6 +7,7 @@
     <title>index</title>
 </head>
 <body>
-hello world!
+이동
+<a href="/test">test</a>
 </body>
 </html>
