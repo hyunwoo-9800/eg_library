@@ -1,0 +1,1021 @@
+@charset "utf-8";
+@import url("default.css");
+@import url("common.css");
+@import url("button.css");
+@import url("layout.css");
+
+.sectionGroup::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+#section1 {
+    padding: 50px 0 40px;
+    background: #fbfbfb url("/include/image/sglib/main/bg_visual.jpg") 50% 50% no-repeat;
+    background-size: cover
+}
+
+.shortcut {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.shortcutList {
+    display: inline-block;
+    overflow: hidden
+}
+
+.shortcutList li {
+    float: left;
+    margin: 0 15px
+}
+
+.shortcutList li a {
+    display: inline-block;
+    position: relative;
+    font-size: 1.063em;
+    line-height: 1.3;
+    color: #fff;
+    vertical-align: top;
+    word-break: break-all
+}
+
+.shortcutList li a .ico {
+    display: block;
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .7)
+}
+
+.shortcutList li a .ico::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url(/include/image/common/ico_main_shortcut.png) 0 0 no-repeat
+}
+
+.shortcutList li a:hover .ico {
+    background-color: #f60
+}
+
+.shortcutList li a:hover, .shortcut ul a:focus {
+    text-decoration: underline
+}
+
+.shortcutList li.svc1 a .ico::before {
+    background-position: 0 0
+}
+
+/* 영화상영 */
+.shortcutList li.svc1 a:hover .ico::before {
+    background-position: 0 -80px
+}
+
+.shortcutList li.svc2 a .ico::before {
+    background-position: -80px 0
+}
+
+/* 희망도서신청 */
+.shortcutList li.svc2 a:hover .ico::before {
+    background-position: -80px -80px
+}
+
+.shortcutList li.svc3 a .ico::before {
+    background-position: -160px 0
+}
+
+/* 자원봉사신청 */
+.shortcutList li.svc3 a:hover .ico::before {
+    background-position: -160px -80px
+}
+
+.shortcutList li.svc4 a .ico::before {
+    background-position: -240px 0
+}
+
+/* 대출조회/반납연기 */
+.shortcutList li.svc4 a:hover .ico::before {
+    background-position: -240px -80px
+}
+
+.shortcutList li.svc5 a .ico::before {
+    background-position: -320px 0
+}
+
+/* 온라인서비스 */
+.shortcutList li.svc5 a:hover .ico::before {
+    background-position: -320px -80px
+}
+
+.shortcutList li.svc6 a .ico::before {
+    background-position: -80px -210px;
+}
+
+/* 스마트도서관 */
+.shortcutList li.svc6 a:hover .ico::before {
+    background-position: -80px -290px
+}
+
+#section2 {
+    padding: 40px 0
+}
+
+#section2 .sectionGroup {
+    position: relative
+}
+
+.boardArticle {
+    position: relative;
+    height: 290px;
+    margin-right: 358px;
+    border: 1px solid #ccc
+}
+
+.boardArticle .tab {
+    overflow: hidden;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc
+}
+
+.boardArticle .tab > li {
+    float: left;
+    padding: 0 20px
+}
+
+.boardArticle .tab > li a {
+    display: block;
+    line-height: 59px;
+    font-size: 1.313em;
+    color: #222
+}
+
+.boardArticle .tab > li.on a {
+    font-weight: bold;
+    line-height: 56px;
+    border-bottom: 3px solid #ccc
+}
+
+.boardArticle .tabContent {
+    margin-right: 200px;
+    padding: 15px 30px
+}
+
+.boardArticle .tabContent li {
+    overflow: hidden;
+    position: relative;
+    padding-right: 90px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.boardArticle .tabContent li a {
+    color: #333
+}
+
+.boardArticle .tabContent li .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #666
+}
+
+.boardArticle .tabContent .more {
+    position: absolute;
+    top: 20px;
+    right: 30px
+}
+
+.boardArticle .tabContent .more a {
+    display: block;
+    width: 19px;
+    height: 19px
+}
+
+.boardArticle .tabContent .more a::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 19px;
+    height: 2px;
+    background-color: #888
+}
+
+.boardArticle .tabContent .more a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 9px;
+    width: 2px;
+    height: 19px;
+    background-color: #888
+}
+
+.boardArticle .tabContent ul a:hover, .boardArticle .tabContent ul a:focus, .serviceShortcut a:hover, .serviceShortcut a:focus {
+    text-decoration: underline
+}
+
+.boardArticle .tabContent li.nodata {
+    padding-right: 0;
+    line-height: 200px;
+    text-align: center
+}
+
+.serviceShortcut {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: 180px;
+    margin: 25px 0;
+    padding: 0 40px;
+    background: url(/include/image/common/bg_border_diagonal.png) 0 0 repeat-y
+}
+
+.serviceShortcut li {
+    height: 50%;
+    padding: 0 15px;
+    text-align: center
+}
+
+.serviceShortcut li:first-child {
+    border-bottom: 1px solid #ccc
+}
+
+.serviceShortcut a {
+    display: inline-block
+}
+
+.serviceShortcut a::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 50px;
+    margin: 0 auto;
+    background: url(/include/image/common/ico_main_shortcut.png) 0 -160px no-repeat
+}
+
+.serviceShortcut li:last-child a {
+    margin-top: 12px
+}
+
+.serviceShortcut li:last-child a::before {
+    background-position-x: -70px
+}
+
+.popupZone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 330px;
+    height: 290px;
+    border: 1px solid #ccc
+}
+
+.popupZone .title {
+    padding: 0 20px;
+    line-height: 59px;
+    font-size: 1.313em;
+    color: #222;
+    border-bottom: 1px solid #ccc
+}
+
+.popupZone .controlGroup {
+    overflow: hidden;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    text-align: right;
+    background-color: #fff
+}
+
+.popupZone .controlGroup a {
+    display: block;
+    float: left;
+    width: 26px;
+    height: 26px;
+    background: url(/include/image/common/btn_roll.png) 0 0 no-repeat
+}
+
+.popupZone .controlGroup .pp-controls, .banner .controlArea .pp-controls {
+    float: left
+}
+
+.popupZone .controlGroup .btnSlidePause {
+    background-position-x: -26px
+}
+
+.popupZone .controlGroup .btnSlidePlay {
+    background-position-x: -52px
+}
+
+.popupZone .controlGroup .btnSlideNext {
+    width: 27px;
+    background-position-x: -78px
+}
+
+.popupZone .popupList {
+    overflow: hidden;
+    position: relative
+}
+
+.popupZone .popupList > li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.popupZone .popupList a, .popupZone .popupList span {
+    display: block;
+    height: 100%
+}
+
+.popupZone .popupList .slide {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.popupZone .textPopup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box
+}
+
+.popupZone .textPopup .tit {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.125em
+}
+
+#section3 {
+    color: #fff;
+    background: linear-gradient(to left, #e3c259 40%, #d8ae24 40%)
+}
+
+#section3 .sectionGroup {
+    padding: 40px 0;
+    background: url(/include/image/common/bg_main_middle.png) 50% 0 no-repeat, linear-gradient(to left, #e3c259 40%, #d8ae24 40%)
+}
+
+#section3 .sectionGroup .title {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-weight: normal;
+    font-size: 1.250em;
+    line-height: 1
+}
+
+#section3 .sectionGroup .title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    border-top: 2px solid rgba(255, 255, 255, .4)
+}
+
+.hours {
+    float: left;
+    width: 60%;
+    box-sizing: border-box
+}
+
+.hours li {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 10px;
+    box-sizing: border-box
+}
+
+.hours li::before {
+    content: "·";
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.hours li b {
+    font-weight: normal
+}
+
+.hours li b::after {
+    content: " :";
+    display: inline
+}
+
+.holiday {
+    float: right;
+    width: 40%;
+    box-sizing: border-box
+}
+
+.holiday .title span {
+    font-size: 1.100em
+}
+
+.holiday ul {
+    margin-left: -12px
+}
+
+.holiday li {
+    float: left;
+    width: 54px;
+    height: 54px;
+    margin: 12px 0 0 12px;
+    font-size: 1.313em;
+    line-height: 54px;
+    color: #333;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff
+}
+
+#section4 {
+    padding: 40px 0;
+    background-color: #f4f4f4
+}
+
+.bookSlider {
+    position: relative
+}
+
+.bookSlider .tab {
+    display: table;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box
+}
+
+.bookSlider .tab > li {
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff
+}
+
+.bookSlider .tab > li:nth-of-type(1n+2) {
+    border-left: 0
+}
+
+.bookSlider .tab > li a {
+    display: block;
+    height: 100%;
+    padding: 15px 5px;
+    font-size: 1.188em;
+    line-height: 1.2
+}
+
+.bookSlider .tab > li.on a {
+    font-weight: bold
+}
+
+.bookSlider .tabContent {
+    position: relative
+}
+
+.bookSlider .controlArea a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: 111;
+    width: 26px;
+    height: 30px;
+    margin-top: -15px;
+    background: url(/include/image/common/btn_roll.png) 0 -60px no-repeat
+}
+
+.bookSlider .controlArea .btnSlidePrev {
+    left: 0
+}
+
+.bookSlider .controlArea .btnSlideNext {
+    right: 0;
+    background-position-x: -30px
+}
+
+.bookSlider .bookListWrap {
+    overflow: hidden;
+    margin: 0 30px
+}
+
+.bookList > li {
+    float: left;
+    position: relative;
+    width: 20%;
+    text-align: center
+}
+
+.bookList .cover {
+    display: inline-block;
+    position: relative;
+    transition: all .5s
+}
+
+.bookList .cover img {
+    width: 160px;
+    height: 220px;
+    border: 1px solid #ccc
+}
+
+.bookList .overlap {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.bookList .overlap .tit {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 1.071em;
+    line-height: 26px;
+    color: #fff;
+    vertical-align: middle
+}
+
+.bookList > li a:hover .overlap, .bookList > li a:focus .overlap {
+    display: table;
+    opacity: 1
+}
+
+.bookList > li.nodata {
+    float: none;
+    width: 100%;
+    line-height: 222px;
+    text-align: center
+}
+
+.banner {
+    position: relative;
+    max-width: 1200px;
+    margin: 30px auto
+}
+
+.banner .title {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 90px;
+    color: #333;
+    font-size: 1.313em;
+    line-height: 1
+}
+
+.banner .controlArea {
+    overflow: hidden;
+    position: absolute;
+    top: 17px;
+    left: 94px
+}
+
+.banner .controlArea a {
+    display: block;
+    width: 26px;
+    height: 25px;
+    background: url(/include/image/common/btn_roll.png) 0 -30px no-repeat
+}
+
+.banner .controlArea > a {
+    float: left
+}
+
+.banner .controlArea .btnSlidePause {
+    background-position-x: -26px
+}
+
+.banner .controlArea .btnSlidePlay {
+    background-position-x: -52px
+}
+
+.banner .controlArea .btnSlideNext {
+    width: 27px;
+    background-position-x: -78px
+}
+
+.bannerZone {
+    overflow: hidden;
+    margin-left: 180px
+}
+
+.bannerZone .bannerList {
+    overflow: hidden
+}
+
+.bannerZone .bannerList > li {
+    float: left;
+    width: 25%;
+    box-sizing: border-box
+}
+
+.bannerZone .bannerList a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin-left: 25px;
+    padding-top: 22.745%;
+    text-align: center;
+    border: 1px solid #ccc
+}
+
+.bannerZone .bannerList a img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+@media screen and (max-width: 1000px) {
+    .hours, .holiday {
+        float: inherit;
+        width: auto
+    }
+
+    #section1 {
+        padding: 30px 0;
+        background-size: auto 100%
+    }
+
+    .shortcutList li a .ico {
+        padding: 15px
+    }
+
+    #section2 {
+        padding: 30px 15px
+    }
+
+    .boardArticle {
+        margin-right: 350px
+    }
+
+    .boardArticle .tabContent {
+        margin-right: 130px;
+        padding: 15px
+    }
+
+    .serviceShortcut {
+        padding: 0 10px
+    }
+
+    #section3, #section3 .sectionGroup {
+        padding: 0;
+        background: none
+    }
+
+    .hours, .holiday {
+        padding: 30px 15px;
+        background-color: #d8ae24
+    }
+
+    .holiday {
+        background-color: #e3c259
+    }
+
+    .bookSlider .tab {
+        padding: 0 15px
+    }
+
+    .bookSlider .tab > li a {
+        font-size: 1.063em
+    }
+
+    .bookList > li {
+        width: 25%
+    }
+
+    .bookList .cover img {
+        width: 140px;
+        height: 190px
+    }
+
+    .bookList > li.nodata {
+        line-height: 192px
+    }
+
+    .banner {
+        padding: 35px 5px 0
+    }
+
+    .banner .title, .banner .controlArea {
+        top: 0;
+        margin-left: 10px
+    }
+
+    .bannerZone {
+        margin: 10px 0 0
+    }
+
+    .bannerZone .bannerList a {
+        margin: 0 5px
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .shortcutList li a {
+        font-size: 1em
+    }
+
+    .shortcutList li a .ico {
+        padding: 10px
+    }
+
+    .shortcutList li a .ico::before {
+        transform: scale(0.8)
+    }
+
+    .boardArticle {
+        margin-right: 0
+    }
+
+    .boardArticle .tab > li {
+        float: left;
+        padding: 0 10px
+    }
+
+    .boardArticle .tab > li a {
+        font-size: 1.063em
+    }
+
+    .popupZone {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: auto;
+        height: auto;
+        margin-top: 20px
+    }
+
+    .bookSlider .tab > li a {
+        padding: 10px 5px;
+        font-size: 1em
+    }
+
+    .bookList > li {
+        width: 33.333%
+    }
+
+    .bookList .cover img {
+        width: 130px;
+        height: 180px
+    }
+
+    .bookList > li.nodata {
+        line-height: 182px
+    }
+
+    .bannerZone .bannerList > li {
+        width: 33.333%
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .shortcutList li {
+        margin: 8px;
+        width: 30%;
+    }
+
+    .shortcutList li a .ico {
+        padding: 0
+    }
+
+    .shortcutList li a .ico::before {
+        transform: scale(0.6)
+    }
+
+    .boardArticle {
+        height: auto
+    }
+
+    .boardArticle .tabContent li {
+        padding-right: 0;
+        line-height: 30px
+    }
+
+    .boardArticle .tabContent li .date {
+        display: none
+    }
+
+    .serviceShortcut {
+        height: 160px;
+        margin: 10px 0
+    }
+
+    .bookList .cover img {
+        width: 110px;
+        height: 150px
+    }
+
+    .bookList > li.nodata {
+        line-height: 152px
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #section1 {
+        padding: 15px 0
+    }
+
+    .shortcutList li {
+        display: inline-block;
+        float: none;
+        width: 32%;
+        margin: 10px 0 0;
+        vertical-align: top
+    }
+
+    .shortcutList li a .ico::before {
+        transform: scale(0.7)
+    }
+
+    .shortcutList li a br {
+        display: none
+    }
+
+    .boardArticle .tabContent {
+        margin-right: 0;
+        padding: 10px 15px
+    }
+
+    .boardArticle .tabContent li {
+        line-height: 28px
+    }
+
+    .boardArticle .tabContent li.nodata {
+        line-height: 140px
+    }
+
+    .serviceShortcut {
+        overflow: hidden;
+        position: relative;
+        top: auto;
+        right: auto;
+        height: 50px;
+        margin: 0;
+        padding: 5px 0;
+        background-position: 0 0;
+        background-repeat: repeat-x
+    }
+
+    .serviceShortcut li {
+        float: left;
+        width: 50%;
+        height: 50px;
+        padding: 0
+    }
+
+    .serviceShortcut li:first-child {
+        border: 0
+    }
+
+    .serviceShortcut a {
+        display: inline-block;
+        line-height: 50px
+    }
+
+    .serviceShortcut a::before {
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+        transform: scale(0.8)
+    }
+
+    .serviceShortcut li:last-child a {
+        margin: 0
+    }
+
+    .bookList .cover img {
+        width: 100px;
+        height: 130px
+    }
+
+    .bookList > li.nodata {
+        line-height: 132px
+    }
+
+    .bannerZone .bannerList > li {
+        width: 50%
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .bookList .cover img {
+        width: 80px;
+        height: 115px
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .shortcutList li a br {
+        display: none
+    }
+
+    .boardArticle .tabContent {
+        margin-right: 0
+    }
+
+    .boardArticle .tabContent li {
+        line-height: 28px
+    }
+
+    .boardArticle .tabContent li.nodata {
+        line-height: 140px
+    }
+
+    .serviceShortcut {
+        overflow: hidden;
+        position: relative;
+        top: auto;
+        right: auto;
+        height: 50px;
+        margin: 0;
+        padding: 5px 0;
+        background-position: 0 0;
+        background-repeat: repeat-x
+    }
+
+    .serviceShortcut li {
+        float: left;
+        width: 50%;
+        height: 50px;
+        padding: 0
+    }
+
+    .serviceShortcut li:first-child {
+        border: 0
+    }
+
+    .serviceShortcut a {
+        display: inline-block;
+        line-height: 50px
+    }
+
+    .serviceShortcut a::before {
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+        transform: scale(0.8)
+    }
+
+    .serviceShortcut li:last-child a {
+        margin: 0
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .sectionGroup {
+        width: 1200px;
+        margin: 0 auto
+    }
+
+    .shortcutList li a {
+        width: 150px
+    }
+
+    .shortcutList li a br {
+        display: none
+    }
+
+    .hours, .holiday {
+        padding: 0 40px
+    }
+
+    .hours li b {
+        display: block
+    }
+
+    #section4 {
+        padding: 40px 0 0
+    }
+
+    .bookSlider {
+        padding-bottom: 75px;
+        background: url(/include/image/common/bg_bar_book.png) 50% 100% no-repeat
+    }
+}

@@ -14,4 +14,11 @@ public class HomeController {
          return "index";
     }
 
+    @GetMapping(value = "/menu1")
+    public String menu1() {
+
+        System.out.println("menu1");
+         return "menu1";
+    }
+
 }

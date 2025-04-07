@@ -1,0 +1,1038 @@
+@charset "utf-8";
+
+.htitle {
+    background-image: url(/include/image/sglib/common/bul_htitle.png)
+}
+
+.dot-list > li, .dot {
+    background-image: url(/include/image/sglib/common/bul_dot.png)
+}
+
+/* Theme Color : #fdfaef,#f7eecc,#edca4c,#e2b826 */
+.themeColor, .themeBtn, .themeBtn a, .themeBtn2 span, .tB03, .libSite, .tnb .choiced a, .virtSelect a, .ss-controls > a, .number-list .num, .popupHeader, .myState li div {
+    background-color: #e2b826 !important
+}
+
+.themeColor2, .themeBtn2, .tB01, .navGroup, .snsFarm, #header::before, .siteMenu, #gnb > li.fbC > ul, #gnbM .fbC > a, .paging span.current, .nav-controls > a, #sitemap > li > ul > li::before, .joinStep li.on .ico, .historyList li::before, .shortcutList li a:hover .ico {
+    background-color: #edca4c !important
+}
+
+.themeBG, .tB02, #pageSearch, .noticeBox, .summaryBox, .prevNext dt {
+    background-color: #fdfaef !important
+}
+
+.themeBG2, .summaryBox::before, .noticeBox::before {
+    background-color: #f7eecc !important
+}
+
+.themeBD, .tnb li.choiced a, .tnb li.choiced a:hover, .tnb li.choiced a:focus {
+    border-color: #e2b826 !important
+}
+
+.themeBD2 {
+    border-color: #f7eecc !important
+}
+
+.themeBD3, .boardArticle .tab > li.on a, #sitemap > li > a {
+    border-color: #edca4c !important
+}
+
+.themeFC, .tB02, #gnb > li.fbC > a, #lnb > li > a.current, .stitle, .bookName {
+    color: #e2b826 !important
+}
+
+.themeFC2 {
+    color: #edca4c !important
+}
+
+#wrap {
+    overflow: hidden
+}
+
+/* top menu */
+#blackBG {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    background-color: #000;
+    opacity: 0.5
+}
+
+#header {
+    position: relative;
+    z-index: 999;
+    border-bottom: 1px solid #d7d7d7;
+    background-color: #fff
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px
+}
+
+.headerInner {
+    position: relative;
+    z-index: 1000
+}
+
+/* libSite */
+.libSite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+.libSite > a {
+    display: inline-block;
+    height: 40px;
+    padding: 0 25px 0 10px;
+    line-height: 40px;
+    color: #fff;
+    vertical-align: top;
+    background: url("/include/image/common/arr_familySite.png") 100% center no-repeat
+}
+
+.libSite ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1210;
+    width: 100%;
+    padding: 0 12px 3px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff
+}
+
+.libSite li + li {
+    border-top: 1px dotted #ccc
+}
+
+.libSite li a {
+    display: inline-block;
+    font-size: 0.938em;
+    color: #333;
+    vertical-align: top
+}
+
+/* snb */
+.siteMenu {
+    position: relative;
+    line-height: 40px;
+    color: #fff;
+    text-align: right
+}
+
+.siteMenu > ul {
+    float: right;
+    border-right: 1px solid rgba(255, 255, 255, .6)
+}
+
+.siteMenu > ul > li {
+    float: left;
+    position: relative;
+    border-left: 1px solid rgba(255, 255, 255, .6)
+}
+
+.siteMenu > ul > li a {
+    display: block;
+    padding: 0 12px
+}
+
+.siteMenu > ul > li a:hover, .siteMenu li a:focus {
+    text-decoration: underline
+}
+
+.siteMenu > ul > li.userInfo {
+    position: relative;
+    padding: 0 12px 0 30px;
+    border-left: 0
+}
+
+.siteMenu > ul > li.userInfo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 22px;
+    height: 24px;
+    margin: 8px 4px 8px 0;
+    vertical-align: top;
+    background: url(/include/image/common/btn_snb.png) 0 -82px no-repeat;
+    background-size: cover
+}
+
+.siteMenu > ul > li.userInfo .memType::before {
+    content: "";
+    display: inline-block;
+    height: 12px;
+    border-left: 1px solid #eee
+}
+
+.siteMenu li.langs {
+    text-align: left
+}
+
+.siteMenu li.langs > a {
+    display: inline-block;
+    padding: 0 30px 0 12px;
+    color: #fff;
+    vertical-align: top;
+    border: 0;
+    cursor: pointer;
+    background: url("/include/image/common/arr_familySite.png") 100% center no-repeat
+}
+
+.siteMenu li.langs > a:hover, .siteMenu li.langs > a:focus {
+    text-decoration: none
+}
+
+.siteMenu li.langs ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1210;
+    width: 100%;
+    padding: 0 12px 3px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff
+}
+
+.siteMenu li.langs li + li {
+    border-top: 1px dotted #ccc
+}
+
+.siteMenu li.langs li a {
+    display: inline-block;
+    padding: 0;
+    color: #333;
+    vertical-align: top
+}
+
+/* logo */
+#logo {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #fff
+}
+
+#logo a {
+    display: inline-block;
+    line-height: 0;
+    vertical-align: middle
+}
+
+/* 검색영역 */
+#btnSearchTop {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 54px;
+    right: 15px;
+    width: 0;
+    height: 32px;
+    margin: 0;
+    padding-left: 32px;
+    background: url(/include/image/common/btn_snb.png) 0 -160px no-repeat
+}
+
+.searchBoxWrap {
+    float: right;
+    padding: 21px 0;
+    height: 42px
+}
+
+.searchBox {
+    position: relative;
+    padding: 0 45px 0 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: #fff
+}
+
+.searchBox .keywordInput input {
+    width: 100%;
+    min-width: 350px;
+    height: 40px;
+    line-height: 40px;
+    color: #222;
+    border: none
+}
+
+.searchBox .btnSearch {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 40px;
+    background: url("/include/image/common/ico_search.png") center center no-repeat
+}
+
+/* gnb */
+#gnbNav {
+    position: relative;
+    z-index: 999;
+    border-top: 1px solid #d7d7d7
+}
+
+#submenuArea {
+    display: none;
+    position: absolute;
+    top: 181px;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid #d7d7d7;
+    background-color: #fff
+}
+
+#gnb {
+    overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+    height: 55px;
+    margin: 0 auto
+}
+
+#gnb > li {
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 100%
+}
+
+#gnb > li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 14px;
+    margin-top: -7px;
+    border-left: 1px solid #a3a3a3
+}
+
+#gnb > li:first-child::before {
+    display: none
+}
+
+#gnb > li > a {
+    display: block;
+    line-height: 55px;
+    font-size: 1.188em;
+    color: #222;
+    text-align: center
+}
+
+#gnb > li a:hover, #gnb > li a:focus {
+    text-decoration: underline
+}
+
+#gnb > li > ul {
+    position: relative;
+    height: 277px;
+    padding: 12px 15px;
+    text-align: left
+}
+
+#gnb > li > ul::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-left: 1px solid #d7d7d7
+}
+
+#gnb > li:first-child > ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: 1px solid #d7d7d7
+}
+
+#gnb > li > ul ul {
+    display: none
+}
+
+#gnb > li > ul li {
+    margin-top: 4px
+}
+
+#gnb > li > ul a {
+    display: inline-block;
+    color: #555;
+    word-break: keep-all
+}
+
+#gnb6, #gnb #gnb7, #gnb #gnb8 {
+    display: none !important
+}
+
+#gnb > li.fbC > a.current {
+    font-size: 1.313em
+}
+
+#gnb > li.fbC > ul a {
+    color: #fff
+}
+
+#gnb > li.fbC > ul a.current {
+    font-weight: bold;
+    font-size: 1.063em;
+    text-decoration: underline
+}
+
+#gnb1 > ul {
+    padding: 12px 20px 12px 72px !important
+}
+
+#gnb4 > ul {
+    padding: 12px 20px 12px 83px !important
+}
+
+#gnb2 > ul, #gnb3 > ul {
+    padding: 12px 20px 12px 45px !important
+}
+
+/* mobile menu */
+#mobileIndexOpen {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 54px;
+    left: 15px;
+    width: 32px;
+    height: 32px;
+    background: url(/include/image/common/btn_snb.png) 0 0 no-repeat
+}
+
+#mobileMembership {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 54px;
+    right: 52px;
+    width: 32px;
+    height: 32px;
+    background: url(/include/image/common/btn_snb.png) 0 -200px no-repeat
+}
+
+#mobileIndexClose {
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: 1px solid #e4e4e4
+}
+
+#mobileIndexClose > a {
+    float: right;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(/include/image/common/btn_mobile_close.png) 0 0 no-repeat
+}
+
+#gnbNavM {
+    display: none;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: -240px;
+    z-index: 1300;
+    width: 240px;
+    height: 100%;
+    background-color: #fff
+}
+
+#gnbM > li {
+    border-bottom: 1px solid #e4e4e4
+}
+
+#gnbM > li > a {
+    display: block;
+    padding: 13px 10px;
+    font-size: 1.154em;
+    color: #333
+}
+
+#gnbM .fbC > a {
+    color: #fff
+}
+
+#gnbM > li ul {
+    display: none
+}
+
+#gnbM > li > ul > li {
+    border-top: 1px solid #e4e4e4
+}
+
+#gnbM > li ul > li > a {
+    display: block;
+    padding: 10px
+}
+
+#gnbM > li > ul > li > a::before {
+    content: "- ";
+    display: inline
+}
+
+#gnbM > li ul ul {
+    padding: 5px 0;
+    border-top: 1px solid #e4e4e4;
+    background-color: #fdfaef
+}
+
+#gnbM > li ul ul > li {
+    margin: 2px 0
+}
+
+#gnbM > li ul ul > li > a {
+    display: inline-block;
+    padding: 3px 10px 3px 15px
+}
+
+#gnbM > li ul ul > li > a::before {
+    content: "· ";
+    display: inline
+}
+
+#gnbM ul {
+    padding: 0 !important
+}
+
+#gnbM a.current {
+    font-weight: bold;
+    font-size: 1.071em
+}
+
+/* subTop */
+.subTopGroup {
+    position: relative;
+    z-index: 88
+}
+
+.subTopGroup .visual {
+    padding: 19px 0;
+    background: url(/include/image/sglib/common/bg_subtop.jpg) 50% 0 no-repeat;
+    background-size: cover
+}
+
+.subTopGroup .slogan {
+    position: relative;
+    z-index: 20;
+    height: 180px;
+    font-size: 1.6em;
+    background: url(/include/image/sglib/common/p_subtop.png) 50% 50% no-repeat;
+    background-size: contain
+}
+
+.subTopGroup .slogan strong {
+    display: block
+}
+
+.subTopGroup h3 {
+    position: relative;
+    margin-top: 40px;
+    padding-bottom: 15px;
+    font-weight: normal;
+    font-size: 1.8em;
+    line-height: 1;
+    text-align: center
+}
+
+.subTopGroup h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    margin-left: -50px;
+    background-color: #555
+}
+
+.navGroup {
+    position: relative;
+    z-index: 10
+}
+
+.navGroup .navArea {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 52px;
+    box-sizing: border-box
+}
+
+.navGroup .home {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    background: url("/include/image/common/ico_home.png") center center no-repeat
+}
+
+.navSelBox {
+    float: left;
+    position: relative;
+    min-width: 220px
+}
+
+.navSelBox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 1px solid #fff;
+    background: url(/include/image/common/arr_tab.png) 100% center no-repeat
+}
+
+.navSelBox a {
+    display: block;
+    padding: 6px 20px;
+    line-height: 30px;
+    letter-spacing: 0;
+    word-break: keep-all
+}
+
+.navSelBox .btnSel {
+    position: relative;
+    padding: 0 40px 0 20px;
+    font-size: 1.063em;
+    line-height: 50px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    z-index: 10
+}
+
+.navSelBox ul {
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    top: 50px;
+    left: -1px;
+    right: 0;
+    background-color: #fff
+}
+
+.navSelBox ul > li {
+    font-size: 0.938em;
+    border-bottom: 1px solid #d7d7d7
+}
+
+.navSelBox ul a.current, .navSelBox ul a:hover, .navSelBox ul a:focus {
+    background-color: #fbfbfb
+}
+
+.navSelBox a.current {
+    font-weight: bold;
+    font-size: 1.063em;
+    letter-spacing: -1px
+}
+
+.navSelBox a[target="_blank"]::after {
+    content: "";
+    display: inline;
+    padding-left: 20px;
+    background: url(/include/image/button/ico_blank_hover.png) 100% 50% no-repeat
+}
+
+.navSelBox .btnSel.focus + ul, .navSelBox .btnSel.on + ul {
+    overflow: visible;
+    height: inherit;
+    border: 1px solid #d7d7d7;
+    border-bottom: 0
+}
+
+/* content wrap */
+#contentcore {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0
+}
+
+#contents {
+    position: relative;
+    z-index: 10;
+    word-break: keep-all
+}
+
+.searchFilterArea {
+    display: none
+}
+
+.searchFilterArea h2 {
+    padding: 20px 0;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center
+}
+
+/*footer*/
+#footer {
+    position: relative;
+    padding-bottom: 50px;
+    background-color: #3a3a3a
+}
+
+#footer::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #6a6a6a
+}
+
+.footerInner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.fnb {
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    line-height: 30px;
+    color: #fff
+}
+
+.fnb li {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    padding-left: 21px;
+    color: #fff;
+    vertical-align: middle
+}
+
+.fnb li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 12px;
+    margin-top: -6px;
+    border-left: 1px solid #fff
+}
+
+.fnb li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    font-weight: normal;
+    color: #fff568
+}
+
+.fnb li:first-child::before {
+    display: none
+}
+
+.fnb li a:hover, .fnb li a:focus {
+    text-decoration: underline
+}
+
+.fAdd address, .fAdd cite {
+    display: block;
+    color: #e1e1e1;
+    letter-spacing: 0
+}
+
+.familySite {
+    position: absolute;
+    top: 12px;
+    right: 0
+}
+
+.familySite select {
+    display: inline-block;
+    height: 35px;
+    font-size: 0.938em;
+    color: #fff;
+    vertical-align: top;
+    border: 1px solid #6a6a6a;
+    background: #444 url(/include/image/common/arr_familySite.png) 100% 50% no-repeat
+}
+
+.familySite select option {
+    color: #fff;
+    background-color: #444
+}
+
+.familySite .btnGo {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 33px;
+    color: #fff;
+    border: 1px solid #6a6a6a;
+    background-color: #444
+}
+
+@media screen and (max-width: 1000px) {
+    .mobileShow {
+        display: block !important
+    }
+
+    .mobileShowInline {
+        display: inline-block !important
+    }
+
+    .mobileHide, .mobileShow2, .mobileShow3, .mHide, #lnbNav {
+        display: none !important
+    }
+
+    #header {
+        margin-top: 0;
+        border: none
+    }
+
+    .headerInner {
+        border-bottom: 1px solid #d7d7d7
+    }
+
+    .siteMenu {
+        width: 100%;
+        font-size: 0.875em
+    }
+
+    .siteMenu > ul > li a, .siteMenu li.langs ul {
+        padding: 0 5px
+    }
+
+    .siteMenu > ul > li.userInfo {
+        padding: 0 5px 0 25px
+    }
+
+    .siteMenu li.langs a {
+        padding-left: 5px
+    }
+
+    .searchBoxWrap {
+        display: none;
+        float: none;
+        position: absolute;
+        top: 92px;
+        left: 0;
+        right: 0;
+        padding: 20px 10px 20px;
+        background-color: #fff;
+        border-bottom: 1px solid #d7d7d7
+    }
+
+    .searchBox .keywordInput input {
+        min-width: auto
+    }
+
+    .subTopGroup .visual {
+        padding: 0
+    }
+
+    #contentcore {
+        padding: 50px 15px
+    }
+
+    .footerInner {
+        margin: 0 10px
+    }
+
+    .fnb li {
+        margin-left: 10px;
+        padding-left: 11px
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .mobileShow2 {
+        display: block !important
+    }
+
+    .mobileHide2 {
+        display: none !important
+    }
+
+    .WebHide {
+        display: block !important
+    }
+
+    .subTopGroup .slogan {
+        height: 150px
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 0.875em;
+        line-height: 1.571
+    }
+
+    #btnSearchTop, #mobileIndexOpen, #mobileMembership {
+        top: 45px
+    }
+
+    .siteMenu {
+        line-height: 30px
+    }
+
+    .siteMenu > ul > li.userInfo {
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-size: 0.786em;
+        line-height: 12px;
+        text-align: left
+    }
+
+    .siteMenu > ul > li.userInfo::before {
+        margin: 3px 4px 3px 0
+    }
+
+    .siteMenu > ul > li.userInfo .memType {
+        display: block
+    }
+
+    .siteMenu > ul > li.userInfo .memType::before {
+        display: none
+    }
+
+    .subTopGroup h3 {
+        margin-top: 25px
+    }
+
+    #contentcore {
+        padding-top: 30px
+    }
+
+    #footer {
+        padding-bottom: 30px
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mobileShow3 {
+        display: block !important
+    }
+
+    .mobileHide3 {
+        display: none !important
+    }
+
+    .subTopGroup .slogan {
+        height: 120px
+    }
+
+    .subTopGroup h3 {
+        font-size: 1.5em
+    }
+
+    #contentcore {
+        padding: 30px 10px
+    }
+
+    #footer::before {
+        top: 50px
+    }
+
+    .fnb {
+        padding: 10px 0
+    }
+
+    .footerInner {
+        padding-bottom: 50px
+    }
+
+    .familySite {
+        top: 100%;
+        right: inherit;
+        left: 0;
+        margin-top: -35px
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #logo img {
+        height: 30px
+    }
+
+    .siteMenu li.sitemap {
+        display: none
+    }
+
+    #btnSearchTop, #mobileIndexOpen, #mobileMembership {
+        top: 40px
+    }
+
+    .searchBoxWrap {
+        top: 82px
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .webHide, .mobileShow, .mobileShow2, .mobileShow3, #mobileIndexOpen, #mobileIndexClose, #btnSearchTop {
+        display: none !important
+    }
+
+    #wrap {
+        min-width: 1200px
+    }
+
+    .headerInner, #contentcore {
+        width: 1200px;
+        margin: 0 auto
+    }
+
+    #logo {
+        float: left;
+        padding: 22px 0
+    }
+
+    .navGroup.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0
+    }
+
+    .searchFilterArea {
+        display: block;
+        float: left;
+        width: 220px;
+        padding-right: 40px
+    }
+
+    .searchFilterArea + #contents {
+        float: right;
+        width: 940px
+    }
+
+    #contents {
+        min-height: 500px
+    }
+}

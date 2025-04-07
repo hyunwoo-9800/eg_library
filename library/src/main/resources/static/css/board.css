@@ -1,0 +1,536 @@
+@charset "utf-8";
+/* board search */
+#pageSearch {background-color:#f8f8f8}
+.pageSearch {overflow:hidden;margin:0 0 30px;padding:15px;text-align:center;border:1px solid #ccc}
+.pageSearch input[type="text"] {width:200px;padding:0 5px}
+.pageSearch .item {overflow:hidden;position:relative;clear:both;line-height:38px;text-align:center}
+.pageSearch .item + .item {margin-top:5px}
+.pageSearch .schForm {display:inline-block;vertical-align:middle}
+.inputDate {display:inline-block;overflow:hidden;position:relative;padding:0 30px 0 5px;line-height:0;vertical-align:middle;border:1px solid #ccc;box-sizing:border-box;background-color:#fff}
+.inputDate input[type="text"] {width:90px;height:36px;margin:0;padding:0;line-height:34px;border:0;text-align:center}
+.inputDate .btnCal {position:absolute;top:50%;right:8px;margin-top:-9px;line-height:0}
+.inputDate .ui-datepicker-trigger {border:0;margin:0;padding:0}
+/* category select */
+.pageCategory {overflow:hidden;margin-bottom:10px;text-align:right}
+.pageCategory label.tit {display:inline-block;margin-right:6px;line-height:38px;color:#333;vertical-align:middle}
+.pageCategory select {min-width:80px;margin-left:3px;vertical-align:middle}
+.pageCategory select + .btn {min-width:65px;margin-left:3px}
+.pageCategory p {line-height:32px}
+/* board search filter */
+.boardSearchForm {overflow:hidden;margin-bottom:30px;padding:20px 20px 20px 10px;border:1px solid #ccc}
+.boardSearchForm .item {display:block;float:left;position:relative;width:50%;margin-bottom:10px;padding-left:80px;box-sizing:border-box}
+.boardSearchForm .item .tit {position:absolute;top:0;left:0;padding-left:10px;font-weight:bold;line-height:32px}
+.boardSearchForm .item .tit + select,.boardSearchForm .field .item .tit + input[type="text"] {display:block}
+.boardSearchForm .item .schForm {position:relative;padding-left:105px}
+.boardSearchForm .item .schForm select.schSel {position:absolute;top:0;left:0;width:100px}
+.boardSearchForm .item .schForm input.schKwd {width:100%}
+.boardSearchForm .item.keywordForm {float:none;clear:both;width:100%;padding-right:0}
+.boardSearchForm .inputDateGroup {float:left;margin:3px 8px 3px 0}
+.boardSearchForm .inputDateGroup .inputDate input[type="text"] {min-width:117px}
+.boardSearchForm .btnArea {margin-top:15px;padding-top:15px;text-align:center;border-top:1px dotted #ccc}
+.boardSearchForm .btnArea a {min-width:120px;line-height:24px;border-radius:4px}
+/* paging */
+.pagingWrap {overflow:hidden;position:relative;min-height:30px;margin-top:20px;padding:5px 0;text-align:center}
+.paging img {vertical-align:top}
+.paging span,.paging a {display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;vertical-align:top;border:1px solid #ddd}
+.paging span.current {width:30px;height:30px;font-weight:600;line-height:30px;color:#fff;border:none}
+.paging a:hover,.paging a:focus,.paging a:active {background-color:#f5f5f5}
+.paging .btn-paging {width:28px;height:28px;line-height:28px;border:1px solid #ddd;background:url(/include/image/board/arr_sp.png) 0 0 no-repeat}
+.paging .btn-paging.first {background-position:0 1px}
+.paging .btn-paging.prev {margin-right:5px;background-position:0 -24px}
+.paging .btn-paging.next {margin-left:5px;background-position:0 -49px}
+.paging .btn-paging.last {background-position:0 -74px}
+.pagingWrap .btn {position:absolute;bottom:0;right:0} /* 글쓰기(등록)버튼 */
+.pagingWrap + form #pageSearch,.boardWrap ~ form #pageSearch {margin-top:30px}
+.btn.loanstatus1 {right: 130px !important}
+/* board filter */
+.boardFilter {overflow:hidden;position:relative;min-height:34px;margin-top:20px;padding-bottom:5px}
+.boardFilter .count {float:left;line-height:34px;background-position:0 50%}
+.boardFilter .sort {float:right}
+.boardFilter .sort > a {display:inline-block;margin-left:10px;padding-left:11px;line-height:34px;word-break:keep-all;background:url(/include/image/board/line_divide.png) 0 50% no-repeat}
+.boardFilter .sort > a:first-child {margin-left:0;padding-left:0;background:none}
+.boardFilter .sort > a.on {font-weight:600;text-decoration:underline}
+.boardFilter .sort select {display:inline-block;margin-right:2px;border:1px solid #dcdcdc}
+.boardFilter > .btn {display:inline-block;padding:0 8px;font-size:0.875em;color:#555;text-align:center;vertical-align:middle;border-radius:3px;border:1px solid #ccc;box-sizing:border-box;background-color:#fff}
+/* basic board list */
+.emptyNote {width:100% !important;padding:10px 0 !important;text-align:center;border-bottom:1px solid #ccc}
+.board-list {table-layout:fixed;border-top:1px solid #555;border-bottom:1px solid #ccc;empty-cells:show;}
+.board-list.loanT {table-layout:auto;}
+.board-list tr.top {background-color:#fbfbfb}
+.board-list th,.board-list td {padding:10px 3px;text-align:center;border-top:1px solid #ccc}
+.board-list thead th {font-weight:normal;background-color:#f8f8f8}
+.board-list thead tr:first-child th {border-top:0}
+.board-list td.title a:hover,.board-list td.title a:focus {text-decoration:underline}
+.board-list td.title,.board-list td.ta_l {padding:10px 5px;text-align:left}
+.board-list td.title a {display:inline-block;overflow:hidden;max-width:90%;vertical-align:middle;text-overflow:ellipsis;white-space:nowrap}
+.board-list td.title img,.board-list td.title b {display:inline-block;margin-left:5px;vertical-align:middle}
+.board-list td.sort {padding:10px 5px;text-align:left;color:#006aaa}
+.board-list td.chkCell {padding:5px 8px;background-color: #f4f4f4}
+.board-list col.lib {width: 80px;}
+/* basic board view */
+span.essential {padding:0 2px;font-weight:bold;color:#eb6100}
+.attach a:hover,.attach a:focus {text-decoration:underline}
+.readonly {background-color:#f8f8f8}
+.board-view {table-layout:fixed;border-top:1px solid #555;empty-cells:show}
+.board-view th,.board-view td {padding:10px;text-align:left;border-bottom:1px solid #ccc}
+.board-view tr:first-child th,.board-view tr:first-child td {border-top:0}
+.board-view tbody + tbody tr:first-child th,.board-view tbody + tbody tr:first-child td {border-top:1px solid #ccc}
+.board-view th {font-weight:normal;color:#555;background-color:#f8f8f8}
+.board-view th.title {font-size:1.071em;text-align:center;border-bottom:1px solid #ccc;background-color:#fff}
+.board-view th.title .tblBtn {font-weight:normal;font-size:0.867em;vertical-align:baseline}
+.board-view td {padding:10px;text-align:left}
+.board-view td textarea {width:100%;height:80px;padding:5px;resize:none;vertical-align:top;box-sizing:border-box}
+.board-view td label {display:inline-block}
+.board-view td label + label {margin-left:15px}
+.board-view td.content {padding:20px 30px;vertical-align:top}
+.board-view td.content img {height:auto !important}
+.board-view th + td.content,.board-view th + td.textarea {padding:10px 30px}
+.board-view td.textarea {padding:10px 0}
+.board-view td.textarea textarea {width:100%;height:300px;padding:5px}
+.board-view .attach a:hover,.board-view .attach a:focus {text-decoration:underline}
+.board-view .attach + .attach {margin-top:5px}
+.board-view .attach img {margin-top:-3px;vertical-align:middle}
+.board-view .inpFile {width:100%;border:1px solid #ddd}
+.board-view .inpFile ~ .inpFile {margin-top:5px}
+.inpFullBtn {position:relative;padding-right:80px}
+.inpFullBtn .btn {position:absolute;top:0;right:0;width:75px;margin:0;line-height:28px}
+.board-view .addPeople {margin-top:5px}
+/* next/prev board */
+.prevNext {overflow:hidden;position:relative;margin-top:-1px;padding-left:110px;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.prevNext dt.prev,.prevNext dt.prev + dd.listx {border-bottom:1px solid #d7d7d7}
+.prevNext dt,.prevNext dd {padding:10px;box-sizing:border-box}
+.prevNext dt {position:absolute;left:0;width:110px;padding:10px 0;color:#555;text-align:center;background-color:#f8f8f8}
+.prevNext dd {overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.prevNext a:hover,.prevNext a:focus {text-decoration:underline}
+/* comment */
+.commentWrite {position:relative;margin-bottom:20px;padding:10px;border-top:1px solid #555;border-bottom:1px solid #555;background-color:#f3f4f8}
+.commentWrite .txtarea {position:relative;padding-right:75px}
+.commentWrite .txtarea textarea {width:100%;height:60px;padding:5px}
+.commentWrite .txtarea .btnSave {display:block;position:absolute;top:0;right:0}
+.commentWrite .txtarea .btnSave a {display:block;width:40px;height:40px;padding:10px 12px;font-size:1.154em;line-height:20px;color:#fff;text-align:center;background-color:#555}
+.commentHead {margin-bottom:8px}
+.commentHead .id,.commentHead .starScore {float:left;font-weight:600}
+.commentHead .byte {float:right;font-size:0.875em}
+.commentList {margin-top:5px;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.commentList li {overflow:hidden;position:relative;padding:10px 0;border-top:1px solid #ddd}
+.commentList li:after {content:"";display:block;clear:both}
+.commentList li:first-child {border-top:0}
+.commentList li .userInfo {position:relative;margin-bottom:5px;line-height:20px}
+.commentList li .ratingStar {vertical-align:middle}
+.commentList li .id {margin-right:10px;font-weight:600;vertical-align:top}
+.commentList li .date {font-size:0.928em;padding-left:10px;vertical-align:top}
+.commentList li .del {display:inline-block;overflow:hidden;position:relative;width:14px;height:14px;vertical-align:middle;background-color:#333}
+.commentList li .del::before {content:"";position:absolute;top:6px;left:2px;width:10px;height:2px;background-color:#fff;transform:rotate(135deg)}
+.commentList li .del::after {content:"";position:absolute;top:6px;left:2px;width:10px;height:2px;background-color:#fff;transform:rotate(-135deg)}
+.commentList li.lock {padding:10px;padding-left:30px;color:#888;background:url(/include/image/board/ico_lock.png) 10px 50% no-repeat}
+
+/* moblie board list */
+.article-list,.article-view {border-top:1px solid #555}
+.article-list > li {overflow:hidden;position:relative;padding:8px 0;border-bottom:1px solid #c9c9c9}
+.article-list > li > a {vertical-align:middle}
+.article-list.check > li {padding-left:20px}
+.article-list .chk {position:absolute;top:50%;left:0;margin:-7px 0 0;line-height:0;vertical-align:top}
+.article-list .title {font-size:1.071em}
+.article-list .title a {text-decoration:underline}
+.article-list .info {color:#777}
+.article-list .btnArea {text-align:right}
+.article-view .title {padding:10px;font-weight:bold;border-bottom:1px dotted #c9c9c9}
+.article-view dd {padding:10px;border-bottom:1px solid #c9c9c9}
+.article-view dd.content {min-height:200px}
+.article-view dd.content img {height:auto}
+.articleWrap .info {margin:2px 0}
+.articleWrap .info::after {content:"";display:block;clear:both}
+.articleWrap .info span {float:left;position:relative;margin-right:9px;padding-right:10px}
+.articleWrap .info span::before {content:"";display:block;position:absolute;top:50%;right:0;width:1px;height:10px;margin-top:-5px;background-color:#c2c2c2}
+.articleWrap .info span:last-child {margin-left:0;padding-left:0}
+.articleWrap .info span:last-child::before {display:none}
+.articleWrap .info .btn {vertical-align:top}
+.articleWrap .info + .reason {margin-top:6px;padding-top:6px;border-top:1px dotted #d7d7d7}
+.articleWrap .info .status {font-weight:bold;color:#f16240}
+.articleWrap .info .status.ready {color:#0258ab}
+.articleWrap .info .status.non {color:#e40000}
+.articleWrap .info .status.finish {color:#666}
+.articleWrap .btn,.articleWrap .title .btn {padding:0 5px;font-size:13px;line-height:22px;text-decoration:none;vertical-align:baseline}
+
+/* book filter */
+.bookFilterForm {overflow:hidden;margin-bottom:30px;border:1px solid #d9d9d9;border-radius:5px}
+.bookFilterForm .field {position:relative;padding-left:70px}
+.bookFilterForm .field + .field {margin-top:6px}
+.bookFilterForm .field .tit {position:absolute;top:0;left:0;font-weight:normal;line-height:38px;color:#333}
+.bookFilterForm .field .rdoBtn {float:left;margin:3px 0}
+.bookFilterForm .field .rdoBtn label {font-size:1em;border-left-width:0}
+.bookFilterForm .field .rdoBtn:first-child label {border-left-width:1px}
+.bookFilterForm .field .rdoBtnGroup {float:left}
+.bookFilterForm .field .rdoBtnGroup .rdoBtn {margin:0 10px 0 0}
+.bookFilterForm .field .rdoBtnGroup .rdoBtn label {min-width:40px;padding:0 5px;border-radius:3px;border-left-width:1px}
+.bookFilterForm .inputDateGroup {float:left;margin-right:8px}
+.filterFormArea {position:relative;padding:20px}
+.filterFormArea .btnSearch {margin-top:15px;text-align:center}
+.filterFormArea .btn {font-size:1.154em;line-height:25px;color:#fff;border-radius:5px;background-color:#666}
+.filterDescArea {padding:15px 20px;background-color:#f4f4f4}
+.bookCategory {margin:30px auto}
+.bookCategory .htitle {margin-bottom:5px}
+.bookCategoryList {padding:0 10px 10px;border:1px solid #d9d9d9;border-top:1px solid #555}
+.bookCategoryList li {float:left;width:20%;margin-top:10px;font-size:0.923em}
+.bookCategoryList li a.on {text-decoration:underline}
+
+/* book list */
+.cover .rank {position:absolute;top:1px;left:2px;width:36px;height:44px;font-size:1.154em;line-height:32px;color:#fff;text-align:center;border-radius:0 0 20px 0;background:url(/include/image/board/bg_rank.png) 0 0 no-repeat;background-size:cover}
+.cover .rank.top {background-image:url(/include/image/board/bg_rank_top.png)}
+.book-list,.book-view {border-top:1px solid #555}
+.book-list > li {overflow:hidden;position:relative;padding:20px 0;border-bottom:1px solid #e2e2e2}
+.book-list .thumb {position:absolute;top:20px;left:0}
+.book-list .thumb .cover,.recommend-list .thumb .cover,.viewBookArea .thumb .cover {display:inline-block;position:relative;width:130px;height:170px;padding-top:5px;line-height:0;vertical-align:top;background:url(/include/image/common/bg_book.png) 0 0 no-repeat;background-size:100% 5px}
+.book-list .thumb img,.recommend-list .thumb img,.viewBookArea .thumb .cover img {display:block;width:100%;height:100%;vertical-align:top;border:1px solid #969696;box-sizing:border-box}
+.book-list .bookInfoList {min-height:175px;margin-left:150px}
+.bookInfoList .bookName {font-size:1.313em;color:#333}
+.bookInfoList .bookName a:hover,.bookInfoList .bookName:focus {text-decoration:underline}
+.bookInfoList .tit {display:inline-block;font-weight:normal;font-size:1em}
+.bookInfoList .tit::after {content:" :";display:inline}
+.bookInfoList dd {clear:left}
+.bookInfoList dd.fall {clear:both !important}
+.bookInfoList dd.desc {overflow:hidden;clear:left;padding-top:5px;padding-left:0;max-height:84px;background:none;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.bookInfoList dd ul > li {overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bookInfoList .btnArea {clear:left;margin-top:10px}
+.viewBookArea {position:relative;padding:25px 0 30px}
+.viewBookArea .thumb {position:absolute;top:30px;left:30px}
+.viewBookArea .thumb .cover {max-width:153px;height:200px}
+.viewBookArea .thumb .cover img {width:100%;height:100%}
+.viewBookArea .bookName,.viewBookArea .bookInfoList dd.list,.viewBookArea .bookInfoList .tag {margin-left:220px}
+.viewBookArea .bookInfoList dd.list li {padding-left:10px;text-overflow:inherit;white-space:normal;background:url(/include/image/common/bul_sdot.png) 0 50% no-repeat}
+.viewBookArea .bookInfoList .tag {padding-left:30px;background:url(/include/image/common/ico_tag.png) 0 6px no-repeat}
+.viewBookArea .bookInfoList .tag a {display:inline-block;margin-left:10px;font-size:0.938em;text-decoration:underline;vertical-align:top}
+.viewBookArea .bookInfoList .tag a::after {content:",";display:inline}
+.viewBookArea .bookInfoList .tag a:last-child::after {display:none}
+.viewBookArea ~ .bookContent {padding:30px;border-top:1px solid #d9d9d9}
+.book-view .viewBookArea {min-height:200px;padding-right:20px}
+
+/* recommend book */
+.recommend-list {border-top:1px solid #555}
+.recommend-list > li {overflow:hidden;position:relative;padding:20px 0;border-bottom:1px solid #e2e2e2}
+.recommend-list .thumb {position:absolute;top:20px;left:0}
+.recommend-list .bookInfoList {min-height:175px;margin:0 10px 0 150px}
+.recommend-list .bookName {overflow:hidden;text-overflow:ellipsis;word-wrap:normal;white-space:nowrap}
+
+/* thumb list/view */
+.thumb-list {overflow:hidden;margin-left:-25px}
+.thumb-list > li {float:left;width:calc(16.666% - 25px);margin-bottom:15px;margin-left:25px;text-align:center;box-sizing:border-box}
+.thumb-list .thumb .cover {display:block;position:relative;padding-top:120%;background:#f3f4f8 url(/include/image/common/noimg_book.png) 50% 50% no-repeat;background-size:60% auto}
+.thumb-list .thumb img {display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #e7e7e7;box-sizing:border-box}
+.thumb-list .tit,.thumb-list .txt {overflow:hidden;max-width:95%;text-overflow:ellipsis;word-wrap:normal;white-space:nowrap}
+.thumb-list .tit {margin:10px 0 5px;font-size:1.063em;color:#333}
+.thumb-list .txt {font-size:0.923em}
+.thumb-list .emptyNote {border-top:1px solid #555}
+
+/* webzine list/view */
+.webzine-list {border-top:1px solid #555;border-bottom:1px solid #d7d7d7}
+.webzine-list > li {overflow:hidden;position:relative;padding:15px 0;border-top:1px solid #e2e2e2}
+.webzine-list > li:first-child {border-top:0}
+.webzine-list .thumb {overflow:hidden;position:absolute;top:14px;left:0;width:160px;height:120px;border:1px solid #e1e1e1;background:#f5f5f5 url(/include/image/common/noimg_thumb.png) 50% 50% no-repeat;background-size:60% auto}
+.webzine-list .thumb a,.webzine-list .thumb img {display:block;width:100%;height:100%;line-height:0}
+.webzine-list .desc {min-height:122px;margin-left:180px}
+.webzine-list .desc .tit {font-weight:600;color:#333}
+.webzine-list .desc .tit a:hover,.thumb-list .desc .tit a:focus {text-decoration:underline}
+.webzine-list .desc .info {margin-top:5px}
+.webzine-list .desc .info li {line-height:24px}
+.webzine-list .desc .cont {overflow:hidden;max-height:100px;line-height:20px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5}
+.webzine-list .desc ul + .cont {max-height:60px;margin-top:5px;-webkit-line-clamp:3}
+.webzine-list .desc .btnArea {margin-top:10px}
+
+/* news list(cover) */
+.cover-list {overflow:hidden;margin-left:-20px}
+.cover-list > li {float:left;width:25%;text-align:center}
+.cover-list > li .cover {display:block;position:relative;padding-top:120%}
+.cover-list > li .cover img {position:absolute;top:0;left:0;border:1px solid #e7e7e7;box-sizing:border-box}
+
+/* movie list */
+.movie-list,.movie-view {border-top:1px solid #555}
+.movie-list > li,.movie-view {overflow:hidden;position:relative;padding:20px 0;border-bottom:1px solid #e2e2e2}
+.movie-list > li.emptyNote {min-height:auto}
+.movie-list .thumb,.movie-view .thumb {position:absolute;top:20px;left:0;width:130px;height:180px;border:1px solid #e1e1e1;background:#f2f2f2 url(/include/image/common/bg_noimg.png) 50% 50% no-repeat}
+.movie-list .thumb img,.movie-view .thumb img {display:block;width:100%;height:100%;vertical-align:top}
+.movieInfoList {margin-left:152px;line-height:1.6}
+.movieInfoList dt {margin-bottom:8px;font-size:1.188em}
+.movieInfoList dt img {margin-top:7px;vertical-align:top}
+.movieInfoList dt a:hover,.movieInfoList dt a:focus {text-decoration:underline}
+.movieInfoList dd .tit {position:absolute;top:0;left:0;font-weight:600}
+.movieInfoList dd {position:relative;padding-left:75px;margin-bottom:0;font-size:0.938em}
+.movieStory {padding:20px 0;border-bottom:1px solid #555}
+
+/* program view */
+.program-view tbody th {font-size:1.188em}
+.program-view dt {font-weight:bold;font-size:1.063em}
+.program-view dd {position:relative;margin-top:10px;padding-left:70px}
+.program-view dd .tit {position:absolute;top:0;left:0;width:60px;margin-top:-2px;padding:2px 0;color:#fff;text-align:center;border-radius:15px}
+
+/* calendar */
+.calWrap {position:relative}
+.calWrap .example {float:right;margin:1px 0;line-height:35px}
+.calWrap .example img {vertical-align:top}
+.calHead {overflow:hidden;margin-bottom:15px;padding:15px;border:1px solid #ddd;background-color:#fbfbfb}
+.calMonth {float:left}
+.calMonth a {display:inline-block;width:36px;height:36px;vertical-align:middle;border:1px solid #ccc;background:#fff url(/include/image/board/arr_sp.png) 0 0 no-repeat}
+.calMonth a.prev {background-position:50% -98px}
+.calMonth a.next {background-position:50% -138px}
+.calMonth .today {height:36px;margin-left:5px;padding:0 15px;line-height:36px}
+.calMonth .month {margin:0 20px;font-size:1.615em;line-height:38px;color:#575757;vertical-align:middle}
+.calMonth .month b {font-weight:600}
+.calendar {table-layout:fixed;width:100%;border-collapse:separate;border-spacing:0px;border-right:1px solid #e2e2e2;empty-cells:show}
+.calendar thead th {width:14.28571428571429%;font-size:1.071em;line-height:40px;color:#000;border-top:1px solid #555;border-left:1px solid #e2e2e2;border-bottom:1px solid #555}
+.calendar thead th:first-child {border-left:1px solid #e2e2e2}
+.calendar td {width:14.28571428571429%;height:60px;padding:5px;vertical-align:top;border-bottom:1px solid #e2e2e2;border-left:1px solid #e2e2e2;empty-cells:show}
+.calendar td .day {display:inline-block; width:100%; margin-bottom:5px;padding:3px;line-height:1;vertical-align:top}
+.calendar td .day:hover,.calendar td .day:focus {text-decoration:underline}
+.calendar td.holiday {color:#777}
+.calendar td.today .today {display:inline-block;margin-left:10px;padding:0 5px;font-size:0.875em;line-height:1.2;color:#fff;vertical-align:top;border-radius:10px;background-color:#555}
+.calendar p {margin-top:5px;font-size:0.75em;line-height:1.3;vertical-align:top}
+.calendar p > a,.calendar p + .btn {font-size:1em}
+.calendar p > a:hover,.calendar p > a:focus {text-decoration:underline}
+.calendar p + .btn {display:block;margin-top:10px;padding:2px 0}
+.facWrap .pageCategory {display: flex; justify-content: flex-end;}
+.facWrap .pageCategory select {width: 215px}
+.facCalendar .btn {display: block; width: 100%; padding: 5px 10px}
+.facCalendar td {height: 100px}
+
+/* FAQ list */
+.faqList {border-top:1px solid #555}
+.faqList > li {border-bottom:1px solid #ddd}
+.faqList > li > div {position:relative;padding:12px 20px 12px 45px;line-height:1.8}
+.faqList div.q {background-color:#fff}
+.faqList div.a {border-top:1px solid #ddd;background-color:#fbfbfb}
+.faqList .ico {overflow:hidden;position:absolute;top:15px;left:15px;line-height:25px}
+
+/* data table(default) */
+.tbl {position:relative;border-top:1px solid #555;border-right:1px solid #ddd;background-color:#fff}
+.tbl .caption {visibility:visible;position:absolute;top:-22px;right:0;width:auto;height:auto;line-height:1.5;text-indent:0}
+.tbl th,.tbl td {padding:10px 8px;text-align:center;border-left:1px solid #ddd;border-bottom:1px solid #ddd;empty-cells:show}
+.tbl thead th {background-color:#fbfbfb}
+.tbl thead th,.tbl tbody th {font-weight:normal;color:#333}
+.tbl tbody th {padding:10px;font-weight:600;text-align:center}
+.tbl tbody th[scope="row"] + td:only-child {padding:10px;text-align:left}
+.tbl thead + tbody th[scope="row"] + td {text-align:center}
+.tbl td li {margin:0}
+.tbl td.title {text-align:left}
+.tbl td.title a:hover,.tbl td.title:focus {text-decoration:underline}
+.tbl td.chkCell {padding:5px 8px;background-color:#f4f4f4}
+.noWall {border-right:0}
+.noWall th,.noWall td {border-left:0}
+.tblScroller {overflow:auto}
+.tblScroller1 {overflow: auto}
+.tblScroller1 table {min-width: 750px}
+.tblScroller table {min-width:640px}
+.tblLegend {margin-top:-28px;text-align:right}
+.tblLegend:after {content:"";display:block;clear:both}
+
+/* 설문조사 */
+.surveyWrap {padding:20px;border-bottom:1px solid #474747}
+.surveyList .q {margin:20px 0 10px;color:#333}
+.surveyList .q:first-child {margin-top:0}
+.surveyList .a {margin-left:15px;color:#666}
+.surveyList .a textarea {width:100%;height:80px;padding:0 4px}
+.surveyList .a li {overflow:hidden;margin-top:5px;line-height:20px}
+.surveyList .a li:after {content:"";display:block;clear:both}
+.surveyList .a li input {margin-top:-2px;vertical-align:middle}
+.surveyList .a .txt {display:block;float:left;width:48%}
+.surveyList .a .graph {display:block;float:right;position:relative;width:50%;padding:4px 0}
+.surveyList .a .graph .graphBar {display:block;height:12px;margin-right:110px;background-color:#f3f4f8}
+.surveyList .a .graph .graphBar .fill {display:block;height:12px;background-color:#000}
+.surveyList .a .graph .count {position:absolute;top:0;right:0;width:100px;text-align:left}
+
+/* photo Gallery */
+.photoThumbList {overflow:hidden;margin-left:-20px}
+.photoThumbList li {float:left;width:33.333%;margin-bottom:20px}
+.photoThumbList li .thumbBox {margin-left:20px;padding-bottom:10px;border:1px solid #ccc}
+.photoThumbList li .thumbBox .thumb {display:block;position:relative;padding-top:60%;background-color:#f3f4f8}
+.photoThumbList li .thumbBox .thumb img {display:block;position:absolute;top:0;left:0;width:100%;height:100%}
+.photoThumbList li .thumbBox .tit {overflow:hidden;margin:20px 20px 10px;line-height:1;color:#464646;text-overflow:ellipsis;white-space:nowrap}
+.photoThumbList li .thumbBox .txt {display:block;overflow:hidden;margin:0 20px;font-size:13px;line-height:1;color:#777;text-overflow:ellipsis;white-space:nowrap}
+.photoThumbList li .thumbBox .date {display:block;margin:0 20px}
+.photoThumbList li.emptyNote {float:none;width:auto;margin-left:20px;border-top:1px solid #555}
+/* required jquery.galleriffic.js */
+/* required jquery.opacityrollover.js */
+.photoContent {clear:both;position:relative;z-index:99}
+.photoContent .controls {position:absolute;bottom:0;left:0;z-index:30;width:108px;height:36px}
+.photoContent .controls a {position:absolute;width:36px;height:36px;text-indent:-999em;background:url(/include/image/board/btn_gallery.png) 0 0 no-repeat}
+.photoThumbView .ss-controls a.play {left:36px;background-position:0 0}
+.photoThumbView .ss-controls a.play:hover,.photoThumbView .ss-controls a.play:focus {background-position:-36px 0}
+.photoThumbView .ss-controls a.pause {left:36px;background-position:0 -36px}
+.photoThumbView .ss-controls a.pause:hover,.photoThumbView .ss-controls a.pause:focus {background-position:-36px -36px}
+.photoThumbView .nav-controls a.prev {left:0;background-position:0 -72px}
+.photoThumbView .nav-controls a.prev:hover,.photoThumbView .nav-controls a.prev:focus {background-position:-36px -72px}
+.photoThumbView .nav-controls a.next {right:0;background-position:0 -108px}
+.photoThumbView .nav-controls a.next:hover,.photoThumbView .nav-controls a.next:focus {background-position:-36px -108px}
+.photoThumbView .slideshow-container {position:relative;clear:both;width:100%;background-color:#f5f5f5}
+.photoThumbView .slideshow {display:block}
+.photoThumbView .slideshow img {width:100%}
+.photoNavigation {clear:both;overflow:hidden;position:relative;width:100%;margin:20px 0}
+.photo-navigation {overflow:hidden}
+.photo-navigation .thumbs {overflow:hidden;position:relative;margin-left:-10px;padding:0}
+.photo-navigation .thumbs li {float:left;width:10%;margin-top:10px;padding-left:10px;box-sizing:border-box}
+.photo-navigation .thumbs a {display:block;overflow:hidden;position:relative;width:100%;padding-top:65%}
+.photo-navigation .thumbs img {display:block;position:absolute;top:0;left:0;width:100%;height:100%;box-sizing:border-box}
+.photoDesc {padding-bottom:20px;border-bottom:1px solid #e1e1e1}
+.photoDesc img {height:auto !important}
+
+/* file */
+.filebox .upload-name {display: inline-block; height: 40px; padding: 0 10px; vertical-align: middle; border: 1px solid #dddddd; width: 30%; color: #999999;}
+.filebox label {padding: 0 20px; color: #fff; vertical-align: middle; background-color: #999999; cursor: pointer; box-sizing: border-box; height: 100%; line-height: 40px; width: 72px}
+.filebox input[type="file"] {position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0;}
+
+/* 시설대관 신청현황 */
+
+.applyHead {position: relative; padding: 7px; background: url(/include/image/contents/bg_pattern.png) 0 0; margin-top: 20px}
+.applyHead::before {content:''; display: block; width: 100%; height: 2px; background-color: #555; position: absolute; top: -7px; left: 0}
+.applyResult {background: #fff; padding: 20px; box-sizing: border-box;}
+.applyResult dt, .applyResult dd {margin: 8px 0}
+.applyResult strong {font-size: 1.1em; font-weight: bold; padding: 0 15px;}
+.applyResult span {padding: 2px 12px 2px; margin-left: 10px; color: #fff}
+
+
+/* *** media query *** */
+@media screen and (max-width:1000px){
+    .book-list .thumb .cover,.recommend-list .thumb .cover {max-width:115px;height:150px}
+    .book-list .bookInfoList,.recommend-list .bookInfoList {min-height:155px;margin-left:130px}
+
+    .thumb-list > li {width:calc(25% - 25px)}
+    .btn.loanstatus2 {left: 0; width:150px}
+
+    .btn.write::before {display: none}
+
+    /* 시설대관신청 */
+    .facWrap .pageCategory {flex-direction: column;}
+    .facWrap .pageCategory select {width: calc(50% - 6px);}
+    .pageCategory select + .btn {width: 100%; margin-top: 10px;}
+}
+@media screen and (max-width:800px){
+    th,td {word-break:break-all}
+    .pageSearch .item,.pageSearch .item + .schForm {display:block;text-align:left}
+    .pageSearch .item + .item,.pageSearch .item + .schForm {margin-top:5px}
+    .board-view input ~ input,.board-view input ~ select {margin:2px 0}
+    .board-view .addPeople .label {display:inline-block;margin-bottom:10px;vertical-align:baseline}
+    .book-list .thumb .cover,.recommend-list .thumb .cover {max-width:107px;height:140px}
+    .book-list .bookInfoList,.recommend-list .bookInfoList {min-height:145px;margin-left:120px}
+    .book-list .desc {overflow:hidden;height:60px !important;line-height:20px !important;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;word-wrap:break-word}
+    .viewBookArea {position:relative;padding:20px 0}
+    .viewBookArea .thumb {top:25px;left:0}
+    .viewBookArea .bookName,.viewBookArea .bookInfoList dd.list,.viewBookArea .bookInfoList .tag {margin-left:170px}
+    .viewBookArea ~ .bookContent {padding:25px 0}
+
+    .thumb-list {margin-left:-15px}
+    .thumb-list > li {width:calc(25% - 15px);margin-left:15px}
+    .thumb-list .tit {font-size:1em}
+    .webzine-list .thumb {width:120px;height:90px}
+    .webzine-list .desc {min-height:90px;margin-left:135px}
+    .surveyList .a .txt {float:none;width:auto}
+    .surveyList .a .graph {float:none;width:auto;max-width:450px}
+
+    .filebox .upload-name {width: calc(100% - 78px)}
+
+
+    /* 시설대관신청조회 */
+    .facSearch .item select{width: 100%}
+    .facSearch .item .inputDate {width: 48.3%}
+    .facSearch .item:nth-child(3) {display: flex; justify-content: space-between;}
+    .facSearch .btn {width: 100%; margin-top: 5px}
+}
+@media screen and (max-width:640px){
+    .pageSearch .schForm {display:block;position:relative;padding:0 65px 0 105px}
+    .pageSearch .schForm select.schSel {position:absolute;top:0;left:0;width:100px}
+    .pageSearch .schForm input.schKwd {width:100%}
+    .pageSearch .schForm input.schKwd + .btn {position:absolute;top:0;right:0;margin:0;line-height:28px}
+    .pageSearch .item .inputDate:first-child {float:left;width:47%}
+    .pageSearch .item .inputDate:last-child {float:right;width:47%}
+    .pageSearch .item ~ .btn {margin-top:5px}
+    .bookFilterForm .field {float:none}
+    .bookFilterForm .field .rdoBtn label {padding:0 10px}
+    .bookFilterForm .field .rdoBtnGroup {margin-top:10px}
+    .filterFormArea .btn {padding:5px 40px}
+    .book-list .thumb .cover,.recommend-list .thumb .cover {max-width:92px;height:120px}
+    .book-list .bookInfoList,.recommend-list .bookInfoList {min-height:125px;margin-left:110px}
+    .book-list .bookInfoList dd {margin-bottom:0}
+    .viewBookArea .thumb .cover {max-width:130px;height:170px}
+    .viewBookArea .bookName,.viewBookArea .bookInfoList dd.list,.viewBookArea .bookInfoList .tag {margin-left:150px}
+    .book-view .viewBookArea {min-height:150px}
+    .thumb-list {margin-left:-10px}
+    .thumb-list > li {width:calc(33.333% - 10px);margin-left:10px}
+    .movie-list .thumb,.movie-view .thumb {width:100px;height:138px}
+    .movieInfoList {margin-left:115px}
+    .movieInfoList dt {margin-bottom:0}
+    .movieInfoList dd {margin:0}
+    /*.calWrap .example,.calendar p {display:none}*/
+    .calWrap .boardWrap::before {content:"* 날짜를 선택하면 일정을 아래에서 확인하실 수 있습니다.";display:block;margin-bottom:5px}
+    .calendar td {padding:2px}
+    .calendar td .day {display:block;margin:0}
+    .calendar p + .btn {font-size:0.714em;word-break:keep-all}
+    .calendar p {overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .photoThumbList {margin-left:-15px}
+    .photoThumbList li {width:50%;margin-bottom:15px}
+    .photoThumbList li .thumbBox {margin-left:15px}
+    .photoThumbList li .thumbBox .tit,.photoThumbList li .thumbBox .txt,.photoThumbList li .thumbBox .date {margin:10px 15px 0}
+    .photo-navigation .thumbs li {width:20%}
+    .movieInfoList dd {padding-left:65px}
+    .btn.loanstatus2 {left: 0; width:130px}
+}
+@media screen and (max-width:480px){
+    .boardSearchForm .item {float:none;width:100%}
+    .paging + .btn {position:relative;right:auto;bottom:auto;margin-top:20px}
+    .commentWrite .txtarea {padding-right:0}
+    .commentWrite .txtarea .btnSave {position:relative;top:auto;right:auto;margin-top:5px;text-align:right}
+    .commentWrite .txtarea .btnSave a {display:inline-block;width:auto;height:auto;padding:5px 10px;font-size:1em}
+    .commentWrite .secret {position:absolute;bottom:15px;left:10px}
+    .bookFilterForm .field {padding-left:60px}
+    .bookFilterForm .inputDate input[type="text"] {width:77px}
+    .filterFormArea {padding:15px}
+    .viewBookArea .thumb .cover {max-width:110px;height:144px}
+    .viewBookArea .bookName,.viewBookArea .bookInfoList dd.list {margin-left:120px}
+    .viewBookArea .bookInfoList .tag {margin:10px 0 0}
+    .recommend-list .bookName {overflow:visible;white-space: normal}
+    .surveyWrap {padding:20px 0}
+    .surveyList .a .graph .graphBar {margin-right:0}
+    .surveyList .a .graph .count {position:relative;top:auto;right:auto;width:auto;margin-bottom:10px}
+    .webzine-list .thumb {width:80px;height:60px}
+    .webzine-list .desc {min-height:60px;margin-left:95px}
+    .photo-navigation .thumbs li {width:25%}
+
+    .board-list {table-layout: auto;}
+    .board-list td.title a {max-width: 90%; white-space: normal; height: 22px;}
+    .board-list td.title img, .board-list td.title b {margin-left: 0;}
+
+}
+@media screen and (max-width:360px){
+    .pageSearch .schForm {padding:0}
+    .pageSearch .schForm select.schSel {position:relative;top:auto;left:auto;width:100%;margin-bottom:5px}
+    .pageSearch .schForm input.schKwd + .btn {display:block;position:relative;top:auto;right:auto;margin-top:5px}
+    .board-view td select + select {margin-top:4px}
+
+    .thumb-list > li {width:calc(50% - 10px)}
+    .movie-list .thumb, .movie-view .thumb {width:90px;height:123px}
+    .movieInfoList {margin-left:100px}
+    .movieInfoList dd {font-size:0.857em;line-height:21px}
+}
+@media screen and (min-width:800px){
+    .filterFormArea {padding-right:90px}
+    .filterFormArea .btnSearch {position:absolute;top:50%;right:15px;margin-top:-23px}
+    .filterFormArea .btn {padding:10px 30px}
+    .book-list .bookInfoList dd.row {clear:none;float:left;margin-right:4px}
+    .book-list .bookInfoList dd.row + dd.row::before {content:"/ ";display:inline}
+    .bookInfoList ul + .btnArea {position:absolute;right:0;bottom:20px}
+    .recommend-list > li {float:left;width:50%;box-sizing:border-box}
+}
+@media screen and (min-width:1000px) {
+    .pageSearch .schSel {min-width:100px}
+    .pageSearch .schKwd {min-width:440px}
+    .pageSearch .schKwd + .btn {padding:5px 10px}
+    .board-view th,.board-view td,.prevNext dt,.prevNext dd {padding:12px 10px}
+    .board-view td.content {padding:30px}
+    .bookFilterForm .field,.bookFilterForm .field + .field {float:left;margin-top:0;margin-right:50px}
+    .bookFilterForm .field:nth-child(3) {clear:left;margin-top:15px}
+    .filterFormArea,.filterDescArea {padding:25px 40px}
+    .filterFormArea .btnSearch {right:40px}
+    .calendar td {padding:10px}
+    .calendar td .day {margin-bottom:12px}
+    .calendar p {overflow:hidden;text-overflow:ellipsis;}
+    .photoThumbView .slideshow-container {width:inherit;height:600px}
+    .photoThumbView .slideshow,.photoThumbView .slideshow li {height:100%}
+    .photoThumbView .slideshow img {display:block;width:inherit;margin:0 auto}
+}

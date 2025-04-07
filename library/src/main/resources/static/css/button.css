@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* jnet button style ver:1.0 */
+
+.btnGroup {overflow:hidden;position:relative;margin:30px auto;text-align:center}
+.btnGroup:after {content:"";display:block;clear:both}
+
+.btn {display:inline-block;padding:5px 15px;color:#fff;text-align:center;letter-spacing:-1px;vertical-align:middle;box-sizing:border-box;background-color:#666}
+.btn + .btn {margin-left:3px}
+.btnGroup .btn {min-width:80px}
+
+/* button type - size */
+.btn.full {display:block;margin:0}
+.btn.wide {min-width:150px;padding:10px 40px;font-weight:bold;font-size:1.071em}
+.btn.large {padding:20px 50px;font-weight:bold;font-size:1.538em;border-radius:10px}
+.btn.small {padding:2px 5px;font-size:0.875em;border-radius:2px}
+.btn.input {min-width:60px;padding:5px;border:0}
+
+/* button type - icon */
+.btn.down::before,.btn.view::before,.btn.write::before,.btn.commit::before,.btn.search::before,.btn.del::before,.btn.new::before,.btn.text::before,.btn.xlsx::before {content:"";display:inline;padding-left:22px;background-position:0 50%;background-repeat:no-repeat}
+.btn.down::before {background-image:url(/include/image/button/ico_down.png)}
+.btn.view::before {background-image:url(/include/image/button/ico_view.png)}
+.btn.write::before {background-image:url(/include/image/button/ico_write.png)}
+.btn.commit::before {background-image:url(/include/image/button/ico_commit.png)}
+.btn.search::before {background-image:url(/include/image/button/ico_search.png)}
+.btn.del::before {background-image:url(/include/image/button/ico_delete.png)}
+.btn.new::before {background-image:url(/include/image/button/ico_new.png)}
+.btn.text::before {padding-left:18px;background-image:url(/include/image/button/ico_txt.png)}
+.btn.xlsx::before {padding-left:18px;background-image:url(/include/image/button/ico_xls.png)}
+
+/* button type - color */
+.btn.print,.btn.white {padding-top:4px;padding-bottom:4px;color:#555;border:1px solid #d2d2d2;background-color:#fff}
+.btn.cncl,.btn.del {color:#666;background-color:#f1f3f6}
+.btn-link {color:#526CA5}
+.btn-link:hover,.btn-link:hover:focus {text-decoration:underline}
+
+/* table text Button or status buttton. use a or span*/
+/* tB00 : end,not (lightgray) */
+/* tB01 : theme color */
+/* tB02 : theme color2 */
+/* tB03 : theme color3 */
+/* tB04 : ~ing (white) */
+/* tB05 : success (blue) */
+.tblBtn {display:inline-block;min-width:50px;padding:0 8px;font-size:0.875em;line-height:22px;color:#fff;text-align:center;word-wrap:normal;white-space:nowrap;vertical-align:middle;box-sizing:border-box;background-color:#555}
+.tblBtn.full,.tblBtn.lib {display:block;margin:4px 0 0 0;padding:0}
+.tblBtn.full:first-child,.tblBtn.lib:first-child {margin-top:0}
+.tB00 {line-height:20px;color:#555;border:1px solid #e4e4e4;background-color:#f3f4f8}
+.tB04 {line-height:20px;color:#333;border:1px solid #e4e4e4;background-color:#fff}
+.tB05 {background-color:#0071b7}
+.tB06 {background-color:#f3340c}
+
+@media screen and (max-width:640px){
+    .btn {padding:5px 12px}
+    .btnGroup .btn {margin-bottom:5px}
+    .btn.full,.btn.wide,.btn.large {padding:10px 15px}
+    .btn.print,.btn.white {padding-top:2px;padding-bottom:2px}
+}
+@media screen and (min-width:1000px){
+    .btnGroup .btn {padding:10px 20px}
+    .btnGroup .btn.wide{padding:10px 40px}
+}

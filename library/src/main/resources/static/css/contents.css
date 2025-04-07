@@ -1,0 +1,634 @@
+@charset "utf-8";
+
+/* login */
+.loginForm {padding:30px;border:1px solid #ccc;background-color:#fff}
+.loginGroup .desc {float:left;width:260px}
+.loginGroup .desc .tit {margin-bottom:10px;font-size:1.438em;color:#000}
+.loginGroup .desc p {font-size:1.125em;color:#999}
+.loginGroup .loginArea {float:right;position:relative;min-width:420px;margin-bottom:30px;padding-right:140px}
+.loginGroup .loginArea .inpArea {position:relative}
+.loginGroup .loginArea .inpArea + .inpArea {margin-top:8px}
+.loginGroup .loginArea .inpArea > input[type="text"],.loginGroup .loginArea .inpArea > input[type="password"] {position:relative;z-index:1;width:100%;height:46px;padding:0 10px;line-height:44px;border-color:#ccc;background-color:#fbfbfb}
+.loginGroup .loginArea .inpArea input[type="text"]::placeholder,.loginGroup .loginArea .inpArea input[type="password"]::placeholder {color:#777;opacity:1}
+.loginGroup .loginArea .btnLogin {display:block;position:absolute;top:0;right:0;width:130px;padding:0;font-weight:bold;font-size:1.063em;line-height:100px;color:#fff;text-align:center;border:0;background-color:#555}
+.loginWrap .checkArea {overflow:hidden;margin-top:25px}
+.loginWrap .checkArea a {display:block;float:left;position:relative;width:calc(33.333% - 12px);margin-left:18px;font-size:1.125em;line-height:80px;color:#fff;text-align:center;background-color:#3082c2}
+.loginWrap .checkArea a:first-child {margin-left:0}
+.loginWrap .checkArea a:nth-of-type(2) {background-color:#69a9da}
+.loginWrap .checkArea a:nth-of-type(3) {background-color:#d75038}
+.loginWrap .checkArea a::before {content:"";display:inline-block;width:70px;height:60px;margin:10px 0;margin-right:20px;vertical-align:top;background:url(/include/image/contents/ico_process_sp.png) 0 -60px no-repeat}
+.loginWrap .checkArea a:nth-of-type(2)::before {background-position:-70px -60px}
+.loginWrap .checkArea a:nth-of-type(3)::before {background-position:-140px -60px}
+.loginDesc,.joinDesc {clear:both}
+/* find ID/PW */
+.findForm {overflow:hidden;padding:50px 10px;text-align:center;border:1px solid #ccc}
+.findForm > img {display:block;margin:0 auto 30px}
+.findForm .desc {font-size:1.125em}
+.findForm .desc strong {font-weight:normal}
+.findForm .btnArea .btn {min-width:150px;padding:10px 15px}
+.findForm .findGroup {padding:0 30px}
+.findArea {position:relative;margin:0 auto}
+.findArea .btnOk {display:block;margin-top:10px;line-height:48px;color:#fff;text-align:center}
+.findArea .inpArea {position:relative;text-align:left}
+.findArea .inpArea + .inpArea {margin-top:10px}
+.findArea .inpArea label {display:block;width:130px;line-height:48px}
+.findArea .inpArea input {display:block;position:relative;z-index:2;width:380px;height:46px;padding:0 10px;line-height:44px;border-color:#ccc;background-color:#fbfbfb}
+.findArea .inpArea input:focus {background-color:#fff}
+.findArea .pass-wrapper {display:none;position:absolute;top:40px;left:50%;z-index:88;width:250px;margin-top:0;margin-left:-71px;padding:10px;text-align:center;border:1px solid #000;box-sizing:border-box;background-color:#fff}
+.findArea .pass-wrapper:before {content:"";position:absolute;top:-7px;left:50%;margin-left:-7px;border-bottom:7px solid #000;border-right:7px solid transparent;border-left:7px solid transparent}
+.findArea .pass-wrapper:after {content:"";position:absolute;top:-6px;left:50%;margin-left:-6px;border-bottom:6px solid #fff;border-right:6px solid transparent;border-left:6px solid transparent}
+.findArea .pass-graybar {max-width:200px;margin:0 auto 10px}
+.findDesc {margin-top:20px;text-align:center}
+/* agree */
+.agreeForm .title {margin:30px 0 10px;font-size:1.063em}
+.agreeBox {margin:10px 0;padding:15px 19px;border:1px solid #ccc}
+.agreeBox.scrollBox {overflow:auto;height:220px}
+.agreeBox .policy-list {margin-bottom:15px}
+.agreeCheck {padding-bottom:10px;font-weight:600;text-align:right;border-bottom:1px dotted #ccc}
+.agreeCheck input {margin-top:-3px;vertical-align:middle}
+/* certy */
+.certifyWrap {overflow:hidden;padding:20px;background-color:#f2f2f2}
+.certifyWrap .certifyBox {float:left;width:calc(100% / 2 - 10px);margin-right:-1px;padding:30px 15px;text-align:center;border:1px solid #e4e4e4;box-sizing:border-box;background-color:#fff}
+.certifyWrap .certifyBox + .certifyBox {margin-left:20px}
+.certifyWrap .title {font-size:1.357em}
+.certifyWrap .desc {min-height:40px;margin:20px 0;word-break:keep-all}
+.certifyWrap .certifyBox .btn {display:block;width:100%;max-width:220px;margin:0 auto;padding:10px 0;font-size:1.231em;text-align:center;background-color:#3082c2}
+.certifyWrap .certifyBox + .certifyBox .btn {padding:9px 0;color:#3082c2;border:1px solid #3082c2;background-color:#fff}
+.certifyWrap img {display:block;margin:0 auto 20px}
+.certifyWrap.child .certifyBox:first-child .btn {background-color:#d75038}
+.certifyWrap.child .certifyBox + .certifyBox .btn {color:#d75038;border-color:#d75038}
+/*join*/
+.joinStep {margin-bottom:30px}
+.joinStep ol {margin-left:-12px}
+.joinStep li {position:relative;float:left;width:25%;padding-left:12px;text-align:center;box-sizing:border-box}
+.joinStep li::after {content:"";position:absolute;top:50%;left:0;width:16px;height:32px;margin-top:-16px;background:url(/include/image/board/arr_sp.png) 0 -210px no-repeat}
+.joinStep li:first-child::after {display:none}
+.joinStep li .txt {display:inline-block;margin:0 10px;font-size:1.063em;line-height:70px;word-break:keep-all;vertical-align:middle}
+.joinStep li .ico {display:inline-block;position:relative;margin:0 10px;padding:15px;vertical-align:middle;border-radius:50%;background-color:#888}
+.joinStep li .ico::before {content:"";display:block;width:60px;height:60px;background:url(/include/image/contents/ico_process_sp.png) 0 0 no-repeat}
+.joinStep li:nth-of-type(2) .ico::before {background-position:-60px 0}
+.joinStep li:nth-of-type(3) .ico::before {background-position:-120px 0}
+.joinStep li:nth-of-type(4) .ico::before {background-position:-180px 0}
+
+/* site map */
+#sitemap > li {position:relative;margin-top:15px}
+#sitemap > li + li {margin-top:40px}
+#sitemap > li > a {display:inline-block;padding-left:50px;font-size:1.625em;line-height:45px;color:#333;border-bottom:2px solid #333}
+#sitemap > li > ul {margin-left:50px;padding:0 15px;border-left:1px solid #d9d9d9}
+#sitemap > li > ul > li {position:relative;padding:10px;padding-left:140px;min-height:25px;line-height:25px;border-top:1px dotted #d9d9d9}
+#sitemap > li > ul > li:first-child {border-top:none}
+#sitemap > li > ul > li::before {content:"";position:absolute;top:18px;left:-20px;width:10px;height:10px;border-radius:50%;background-color:#f60}
+#sitemap > li > ul > li > a {display:block;position:absolute;top:10px;left:0;font-weight:bold}
+#sitemap > li > ul a:hover,#sitemap > li > ul a:focus {text-decoration:underline}
+#sitemap > li > ul ul {overflow:hidden}
+#sitemap > li > ul ul > li {display:inline-block;margin-left:40px}
+#sitemap > li > ul ul > li:before {content:"- ";display:inline}
+
+/* process list */
+.processWrap {overflow:hidden;margin:10px 0;padding:5px 0;color:#fff;text-align:center;background-color:#f2f2f2}
+.process-list {overflow:hidden;max-width:1000px;margin:0 auto;letter-spacing:-0.05em}
+.process-list > li {float:left;margin:15px 0}
+.process-list > li {position:relative;float:left;padding:0 21px;text-align:center;box-sizing:border-box}
+.process-list > li::after {content:"";position:absolute;top:50%;left:-8px;width:16px;height:32px;margin-top:-16px;background:url(/include/image/board/arr_sp.png) 0 -210px no-repeat}
+.process-list > li:first-child::after {display:none}
+.process-list.col-3 > li {width:33.333%}
+.process-list.col-4 > li,.process-list.col-8 > li,.process-list.col-7 > li {width:25%}
+.process-list.col-5 > li,.process-list.col-9 > li,.process-list.col-10 > li {width:20%}
+.process-list.col-6 > li {width:16.666%}
+.process-list > li > div {position:relative;width:100%;padding-top:100%}
+.process-list .block {position:absolute;top:0;left:0;width:100%;height:100%;text-align:center;border-radius:50%}
+.process-list .col {display:table;width:100%;height:100%}
+.process-list .txt {display:table-cell;width:100%;height:100%;font-size:0.938em;line-height:1.3;vertical-align:middle}
+.process-list .txt::before {content:"";display:block;width:47px;height:47px;margin:0 auto 10px;background:url(/include/image/contents/ico_process_sp.png) 0 -120px no-repeat;background-size:200px auto}
+.process-list.ico1 > li:nth-of-type(1) .txt::before {background-position:0 -80px}
+.process-list.ico1 > li:nth-of-type(2) .txt::before {background-position:-47px -80px}
+.process-list.ico1 > li:nth-of-type(3) .txt::before {background-position:-93px -80px}
+.process-list.ico1 > li:nth-of-type(4) .txt::before {background-position:-141px -80px}
+.process-list.ico2 > li:nth-of-type(1) .txt::before {background-position:0 -133px}
+.process-list.ico2 > li:nth-of-type(2) .txt::before {background-position:-47px -133px}
+.process-list.ico2 > li:nth-of-type(3) .txt::before {background-position:-94px -133px}
+.process-list.ico2 > li:nth-of-type(4) .txt::before {background-position:-141px -133px}
+.process-list.ico3 > li:nth-of-type(1) .txt::before {background-position:0 -186px}
+.process-list.ico3 > li:nth-of-type(2) .txt::before {background-position:-47px -186px}
+.process-list.ico3 > li:nth-of-type(3) .txt::before {background-position:-94px -186px}
+.process-list.ico3 > li:nth-of-type(4) .txt::before {background-position:-141px -186px}
+.process-list.ico4 .block {top:-8px;left:-8px;padding:7px;border:1px solid #ccc;background-clip:content-box}
+
+.processTxtWrap {overflow: hidden; margin-top: 10px; padding: 30px; color: #fff; background-color: #f2f2f2;}
+.processTxt-list {margin-left: -50px;}
+.processTxt-list li {float: left; width: calc(25% - 50px); height: 85px; margin-left: 50px; line-height: 1.3; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 10px; position: relative;}
+.processTxt-list li::before {content: ""; position: absolute; left: -32px; top: 50%; width: 16px; height: 32px; margin-top: -16px; background: url(/include/image/board/arr_sp.png) 0 -210px no-repeat;}
+.processTxt-list li:first-child::before {display: none;}
+.processTxt-list li div span {font-size: 0.875em;}
+.processTxt-list li div a.btn {font-size: 0.875em; padding: 2px 10px; margin-top: 3px;}
+
+.hopebookGuide {margin:10px;padding:20px 0;text-align:center;border:1px solid #ccc}
+.hopebookGuide .process {overflow:hidden;letter-spacing:-0.05em}
+.hopebookGuide .process > li {float:left;position:relative;width:16.666%;margin:10px 0;padding:0;text-align:center;box-sizing:border-box}
+/* .hopebookGuide .process > li::after {content:"";position:absolute;top:49px;left:-8px;width:16px;height:32px;background:url(/include/image/board/arr_sp.png) 0 -210px no-repeat}
+ */
+.pro_flex{display:flex;align-items:center;justify-content: center;}
+.hopebookGuide .process .next01{font-size:0;width:18px;height:32px;padding-left:0 !important;background:url(/include/image/board/arr_sp.png) 0 -210px no-repeat}
+.hopebookGuide .process > li:first-child::after {display:none}
+.hopebookGuide .process .txt {display:block;margin: 0 10%;font-size:0.938em;text-align: left;line-height:1.333;}
+.hopebookGuide .process .ico {display:inline-block;padding:9px;border-radius:50%;vertical-align:middle;border:1px solid #ccc;background-clip:content-box}
+.hopebookGuide .process .ico span {display:block;width:70px;height:70px;margin:20px;vertical-align:top;background:url(/include/image/contents/ico_process_sp.png) 0 0 no-repeat}
+.hopebookGuide .process > li:nth-of-type(1) .ico span {background-position:0 -360px}
+.hopebookGuide .process > li:nth-of-type(2) .ico span {background-position:-70px -360px}
+.hopebookGuide .process > li:nth-of-type(3) .ico span {background-position:-140px -360px}
+.hopebookGuide .process > li:nth-of-type(4) .ico span {background-position:0 -120px}
+.hopebookGuide .process > li:nth-of-type(5) .ico span {background-position:-210px -360px}
+.hopebookGuide .process > li:nth-of-type(6) .ico span {background-position:-140px -120px}
+
+/* my library */
+.myInfoBox {overflow:hidden;position:relative;margin-bottom:30px;border:1px solid #d9d9d9;background-color:#fff}
+.myInfoBox .btn {padding:0 5px;line-height:18px}
+.myInfoBox .btnModiry {position:absolute;top:12px;right:11px;padding:2px 5px}
+.myInfoBox .title {padding:11px 15px;padding-right:100px;font-size:1.063em}
+.myInfoBox .title .name {font-size:1.214em}
+.myInfoBox .myInfo {clear:both;position:relative;min-height:88px;padding:15px;padding-left:120px}
+.myInfoBox .myInfo .memType {overflow:hidden;position:absolute;top:50%;left:15px;margin-top:-44px;border-radius:50%}
+.myInfoBox .myInfo .memType strong {display:table-cell;width:88px;height:88px;font-size:1.063em;line-height:1.3;color:#fff;text-align:center;vertical-align:middle}
+.myInfoBox .myInfo .memType strong.typeB {background-color:#666}
+.myInfoBox .myInfo .memType strong.typeC {background-color:#e42600}
+.myInfoBox .myInfo .memType strong span {display:block;font-weight:normal;font-size:12px;line-height:1em}
+.myInfoBox .myInfo .memType + .myInfoList {display:table-cell;width:100%;height:88px;word-break:keep-all;vertical-align:middle}
+.myInfoBox .myInfoList .btn {font-size:0.875em}
+.myInfoBox .membership {overflow:hidden;padding:15px}
+.myInfoBox .membership .barcode {position:relative;margin-top:10px;text-align:center}
+.myState {margin:0 0 30px -5px}
+.myState li {float:left;width:25%}
+.myState li div {position:relative;margin-left:5px;padding:20px;color:#fff}
+.myState li strong {font-weight:normal}
+.myState li a {position:absolute;top:22px;right:20px;font-weight:bold;font-size:1.714em}
+.myState li a:hover,.myState li a:focus {text-decoration:underline}
+.menuShortcut {margin-left:-15px}
+.menuShortcut li {float:left;width:33.333%;margin-bottom:15px;text-align:center}
+.menuShortcut li a {display:block;margin-left:15px;padding:24px;border:1px solid #d9d9d9}
+.menuShortcut .tit {display:block;position:relative;padding-bottom:12px;margin-bottom:20px;font-size:1.313em;letter-spacing:-1px}
+.menuShortcut .tit::after {content:"";display:block;position:absolute;bottom:0;left:50%;width:80px;height:1px;margin-left:-40px;background-color:#333}
+.menuShortcut .txt {display:block;min-height:66px;word-break:keep-all}
+.keywordSetting {overflow:hidden;margin:30px 0;border:1px solid #d9d9d9;border-radius:8px}
+.keywordSetting > div {min-height:38px}
+.keywordSetting .tit {position:absolute;top:15px;left:15px;font-size:1.063em;line-height:38px;color:#333}
+.keywordSetting .myKeyword {position:relative;padding:15px;padding-bottom:9px;padding-left:130px;line-height:38px;background-color:#f8f8f8}
+.keywordSetting .mykeywordForm {position:relative;padding:15px;padding-left:130px}
+.keywordSetting .mykeywordList li {float:left;margin:0 6px 6px 0;padding:0 15px;line-height:38px;border-radius:38px;background-color:#fff}
+.keywordSetting .mykeywordList button {display:inline-block;position:relative;width:18px;height:18px;margin:10px 0 0 3px;line-height:0;text-indent:-999em;vertical-align:top;border-radius:50%;background-color:#eee}
+.keywordSetting .mykeywordList button::before {content:"";position:absolute;top:8px;left:4px;width:10px;height:2px;background-color:#555;transform:rotate(135deg)}
+.keywordSetting .mykeywordList button::after {content:"";position:absolute;top:8px;left:4px;width:10px;height:2px;background-color:#555;transform:rotate(-135deg)}
+.keywordSetting .mykeywordInput {position:relative;padding-right:77px}
+.keywordSetting .mykeywordInput .btn {position:absolute;top:0;right:0;width:70px;margin:0;line-height:28px}
+
+/* intro */
+.greeting {overflow:hidden}
+.greeting strong {display:block;margin-bottom:20px;font-weight:normal;font-size:1.625em}
+.greeting p {font-size:1.063em}
+.greeting p > img {display:inline;float:right;margin-left:30px}
+.greeting .sign {margin-top:30px;line-height:30px;text-align:right}
+.greeting .sign em {font-size:1.875em;vertical-align:middle}
+
+.historyWrap,.historyList {position:relative}
+.historyWrap::before {content:"";position:absolute;top:7px;left:7px;width:1px;height:100%;background-color:#e4e4e4}
+.historyWrap .title {overflow:hidden;position:relative;width:166px;height:166px;margin:0 auto 30px;padding:7px;color:#fff;border:1px solid #ccc;border-radius:50%;box-sizing:border-box;background-clip:content-box}
+.historyWrap .title h4 {padding:32px 0;font-weight:normal;font-size:1.125em;line-height:42px;text-align:center}
+.historyWrap .title h4 span {display:block;position:relative;color:rgba(255,255,255,.7)}
+.historyWrap .title h4 span::after {content:"";position:absolute;bottom:0;left:50%;width:24px;margin-left:-12px;border-top:1px solid #fff}
+.historyList li {position:relative;margin-bottom:30px;padding-left:30px;box-sizing:border-box}
+.historyList li strong {display:block;position:relative;margin-bottom:20px;padding-bottom:15px;font-size:1.750em;line-height:30px;text-align:center;border-bottom:1px solid #ccc}
+.historyList li::before {content:"";display:block;position:absolute;top:38px;left:50%;z-index:7;width:14px;height:14px;margin-left:-7px;border-radius:50%;background-color:#000}
+.historyList dl {overflow:hidden;position:relative;font-size:1.063em;line-height:25px}
+.historyList dl::after {content:"";display:block;clear:both}
+.historyList dl dt,.historyList dl dd {margin-top:5px}
+.historyList dl dt {font-weight:bold;font-size:1.294em}
+
+.symbolGuide {position:relative;margin-bottom:30px;padding:40px;border:1px solid #ccc}
+.symbolGuide .thumb {position:absolute;top:40px;left:40px;border:1px solid #ccc}
+.symbolGuide dl {min-height:220px;margin-left:330px}
+.symbolGuide dt {margin-bottom:10px;font-weight:bold;font-size:1.294em;line-height:1}
+.symbolGuide dd + dd {margin-top:10px}
+.symbolGuide dd li {margin-top:5px}
+
+.organList {overflow:hidden;margin:0 auto 50px;text-align:center; box-sizing: border-box;}
+.organList > li {width: calc(50% - 2.5px); float: left}
+.organList li {position:relative}
+.organList li strong {display:block;margin:0 auto;line-height:55px;vertical-align:top}
+.organList .depth-1 > span {display:inline-block;overflow:hidden;position:relative;padding-bottom:150px;text-align:center;vertical-align:top}
+.organList .depth-1 > span::before {content:"";position:absolute;top:0;left:50%;z-index:-1;height:100%;border-left:1px solid #999;}
+.organList .depth-1 > span strong {display:table-cell;width:160px;height:160px;font-size:1.375em;line-height:1.6;color:#fff;vertical-align:middle;border:3px solid #ccc;border-radius:50%;background-color:#555}
+
+.organList .depth-1_2 {margin-left: 5px}
+.organList .depth-1_2 > .depth-2 {margin-top: 0}
+.organList .depth-1_2 > .depth-2 li > ul.depth-3{border-top: 1px solid #999}
+.organList .depth-1_2 > span strong {background-color: #d9a681 ; border: 3px solid #9c593f}
+
+.organList .depth-2 {margin-top:-110px}
+.organList .depth-2 > li.sub {text-align:left}
+.organList .depth-2 > li.sub::before {content:"";position:absolute; top:50%; right:50%;z-index:-1; width:15%;border-top:1px solid #999}
+.organList .depth-2 > li.sub span {display:inline-block; width:32%; padding:0 10px;text-align:center;box-sizing:border-box; margin-left: 8%}
+.organList .depth-2 > li.sub strong {width:100%;font-size:1.150em;color:#fff;background-color:#555;}
+.organList .depth-2 > li.sub + li {border-top:1px solid #999; margin-top: 55px}
+.organList .depth-3 {margin:0 -5px}
+.organList .depth-3 > li {float:left;width:24.5%;padding:60px 5px 0;box-sizing:border-box}
+.organList .depth-3 > li::before {content:"";position:absolute;top:0;left:50%;height:60px;border-left:1px solid #999;}
+.organList .depth-3 > li:first-child::after {content:"";position:absolute;top:-1px;left:0;width:50%;height:2px;background-color:#fff}
+.organList .depth-3 > li:last-child::after {content:"";position:absolute;top:-1px;right:-2px;width:50%;height:2px;background-color:#fff}
+.organList .depth-3 > li strong {border:1px solid #ccc}
+.organList .depth-4 {margin-top:20px;background-color:#fff}
+.organList .depth-4 li {margin-top:5px;padding:8px 0;border:1px solid #ccc}
+
+.locationMap {margin-bottom:30px;border:1px solid #dbdbdb}
+.locationMap .info {overflow:hidden;position:relative;padding:25px 30px;padding-left:150px;border-top:1px solid #dbdbdb}
+.locationMap .info::before {content:"";position:absolute;top:30px;left:50px;height:80px;padding-left:60px;background:url(/include/image/contents/ico_mark_location.png) 0 0 no-repeat}
+.locationMap .wrap_controllers {border:0 !important}
+
+.facilityList {margin-top:15px}
+.facilityList > li {float:left;width:50%;margin-top:5px}
+.facilityList li span {display:inline-block;width:20px;margin-right:4px;line-height:20px;border-radius:50%;color:#111;text-align:center}
+.facilityList li span.ccgr {background-color:#c5ef8b}
+.facilityList li span.ccbl {background-color:#b6e8f4}
+.facilityList li span.ccyl {background-color:#fde263}
+.facilityList li span.ccor {background-color:#ffcb7c}
+.facilityList li span.ccpk {background-color:#ffc1cb}
+.facilityList li span.ccpp {background-color:#e4d0ff}
+.facilityList li span.ccgry {background-color:#e5e5e5}
+.floorTab {margin-bottom:10px}
+.floorTab li {float:left;margin:0 3px 3px 0}
+.floorTab li:last-child {margin-right:0}
+.floorTab li a {display:inline-block;min-width:60px;padding:0 10px;border:3px solid #eee;font-weight:600;font-size:1.643em;text-align:center;line-height:44px;vertical-align:top;border:3px solid #eee;box-sizing:border-box}
+.floorInfo {display:none;overflow:hidden;vertical-align:middle}
+.floorInfo .floorImg {height:435px;padding-top:35px;text-align:center;background-color:#f5f5f5}
+
+.mapSearchArea {position:relative;padding:40px;margin-bottom:30px}
+.mapSearchArea .title {position:relative;z-index:1;margin-bottom:20px;font-size:1.625em;line-height:1}
+.mapSearchArea .title + p {font-size:1.250em}
+.mapSearchArea .libSearchArea {display:inline-block;position:relative;z-index:3;margin-top:30px}
+.mapSearchArea .libSearchArea .btitle {font-size:1.375em;color:#222}
+.mapSearchArea .libSearchArea .libSearch {position:relative;max-width:230px;margin-top:10px;padding-right:70px}
+.mapSearchArea .libSearchArea .libSearch select {width:100%;height:50px}
+.mapSearchArea .libSearchArea .libSearch .btn {position:absolute;top:0;right:0;width:60px;padding:0;line-height:50px}
+.mapSearchArea .bgmap {position:absolute;top:50%;right:5px;z-index:2;margin-top:-190px;padding:0 5.41%;text-align:center;background:url(/include/image/contents/bg_map.png) 50% 50% no-repeat;background-size:contain}
+.mapSearchArea .bgmap .map {position:relative}
+.mapSearchArea .bgmap a {position:absolute;width:19px;height:32px}
+.mapSearchArea .bgmap a .libName {display:none;position:absolute;top:-90%;left:-50%;padding:2px 10px;font-weight:bold;color:#3f5f9c;white-space:nowrap;border:2px solid #81a0d9;border-radius:5px;background-color:#fff}
+.mapSearchArea .bgmap a.on .libName,.mapSearchArea .bgmap a:hover .libName,.mapSearchArea .bgmap a:focus .libName {display:inline-block}
+.mapSearchArea .bgmap a.on::after,.mapSearchArea .bgmap a:hover::after,.mapSearchArea .bgmap a:focus::after {content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:url(/include/image/contents/ico_map_pin.png) 50% 100% no-repeat}
+.mapSearchArea .bgmap a.sllib {top:58.157%;right:13.617%}
+.mapSearchArea .bgmap a.pslib {top:71.052%;right:31.702%}
+.mapSearchArea .bgmap a.ajlib {top:56.052%;left:36.808%}
+.mapSearchArea .bgmap a.jslib {top:21.578%;right:24.893%}
+.mapSearchArea .bgmap a.oslib {top:48.684%;left:53.617%}
+.mapSearchArea .bgmap a.jdlib {top:27.105%;right:22.553%}
+.mapSearchArea .bgmap a.jwlib {top:7.368%;right:19.787%}
+.mapSearchArea .bgmap a.sglib {top:44.210%;right:22.978%}
+.mapSearchArea .bgmap a.bdrlib {top:48.421%;right:7.234%}
+.mapSearchArea .bgmap a.cbsmall {top:40.526%;left:34.255%}
+.mapSearchArea .bgmap a.bjsmall {top:56.315%;right:7.234%}
+.mapSearchArea .bgmap a.stsmall {top:38.421%;right:15.531%}
+.mapSearchArea .bgmap a.sjsmall {top:30.263%;right:26.595%}
+.mapSearchArea .bgmap a.pssmall {top:62.631%;left:18.085%}
+.mapSearchArea .bgmap a.mkmp {top:82.69473684210526%;left:35.0563829787234%}
+
+.onlineService {overflow:hidden;margin-bottom:40px;padding:40px;padding-right:46.666%;color:#333;background-position:96.667% 100%;background-repeat:no-repeat;background-size:43.333% auto}
+.onlineService.ebook {background-image:url(/include/image/contents/img_service_ebook.png)}
+.onlineService.audio {background-image:url(/include/image/contents/img_service_audio.png)}
+.onlineService.dbpia {background-image:url(/include/image/contents/img_service_dbpia.png)}
+.onlineService.nsi {background-image:url(/include/image/contents/img_service_nsi.png)}
+.onlineService.smart {background-image:url(/include/image/contents/img_service_smart.png)}
+.onlineService.notice {background-image:url(/include/image/contents/img_service_notice.png)}
+
+.servicePreface dt {margin-bottom:20px;font-weight:bold;font-size:1.375em;line-height:1}
+.servicePreface dt b {font-size:1.273em;color:#f64f44}
+.servicePreface dd.btnArea {margin-top:20px}
+.servicePreface dd.btnArea a {display:inline-block;max-width:180px;padding:0 20px;font-size:1.125em;line-height:50px;color:#fff;text-align:center;background-color:#f64f44;white-space:nowrap;}
+
+
+.add_fac {position: relative; border: 1px solid #dbdbdb; margin-top: 20px; padding: 40px 20px;}
+.add_fac .img{position: absolute; top: 35px; left: 20px; width: 300px}
+.add_fac .cont {padding-left: 320px}
+.add_fac .btn {position: absolute; top: 100px; right: 100px}
+
+/* 시설대관 */
+.facRental {border-top: 1px solid #333}
+.facInfo {padding: 30px 0; border-bottom: 1px solid #ccc; position: relative}
+.facInfo .cont {width: calc(100% - 380px); position: relative}
+.facInfo .cont .txt {width: calc(100% - 140px)}
+.facInfo .cont .tit {margin-bottom: 20px;}
+.facInfo .cont .tit .libName {width: 75px; height: 30px; display: inline-flex; color: #fff; justify-content: center; margin-right: 1.666666666666667%; align-items: center; background-color: #999}
+.facInfo .cont ul {width: 80%;}
+.facInfo .cont li {display: flex; }
+.facInfo .cont li .stit {width: 140px; font-weight: 700;}
+.facInfo .cont li .text {width: calc(100% - 140px)}
+.facInfo .img {width: 340px; height: 240px; background-color: #ececec}
+.facInfo .img img {width: 100%; height: 100%}
+.facInfo {display: flex; align-items: center; justify-content: space-between;}
+.facInfo .cont .btn {position: absolute; top: 50%; right: 30px; background-color: #007fd8; width: 150px; height: 50px; transform: translateY(-50%);}
+
+.memoBox .subtitle {font-size: 1.294em; color: #333;}
+.memoBox .memoContent {width: 100%; border-top: 2px solid #666; border-bottom: 1px solid #e2e2e2; padding: 22px 0px; text-align: center; margin-top: 14px; color: #777}
+.memoBox .tblWrap .memotbl {position: relative; border-top: 2px solid #666; background-color: #fff;}
+.memoBox .tblWrap th, td {padding: 16px 8px; text-align: center; border-bottom: 1px solid #ddd; empty-cells: show;}
+
+.processList {width: 100%;}
+.processList ul {display: flex; flex-wrap: wrap; justify-content: space-between; padding: 30px;}
+.processList ul li {position: relative; font-size: 0.882em; height: 160px; color: #fff; line-height: 1.3; display: flex; justify-content: center; align-items: center;}
+.processList ul li div {width: 140px; height: 140px; position: relative; display: flex; flex-direction: column; justify-content: center; text-align: center; background-color: #0d51a5; border-radius: 50%;}
+.processList.col-5 ul li {width: calc(20% - 70px);}
+.processList.col-6 ul li {width: calc(16.66% - 35px);}
+.processList ul li::before {content: ""; position: absolute; width: 160px; height: 160px; border-radius: 50%; border: 1px solid #ccc;}
+.processList ul li::after {content: ""; position: absolute; top: 50%; right: 0px; width: 16px; height: 32px; margin-top: -16px; background: url(/include/image/board/arr_sp.png) 0 -210px no-repeat;}
+.processList.col-5 ul li::after {margin-right: -52px;}
+.processList.col-6 ul li::after {margin-right: -30px;}
+.processList ul li:last-child:after {display: none;}
+.processList ul li span::before {content:'▼\A'; white-space:pre;}
+
+
+@media screen and (max-width:1024px){
+    .loginGroup .desc {float:none;width:100%}
+    .loginGroup .loginArea {float:none;min-width:auto;max-width:340px;margin:30px auto;padding-right:110px}
+    .loginGroup .loginArea .btnLogin {width:100px}
+
+    /*     .hopebookGuide .process > li {width:33.333%} */
+    .hopebookGuide .process > li:nth-of-type(4)::after {display:none}
+
+    .greeting img {width:250px}
+    .mapSearchArea .bgmap {margin-top:-150px}
+    .mapSearchArea .bgmap .map {height:300px}
+
+    .servicePreface dt b {display:block;margin-top:5px}
+
+    .organList .depth-1_2 {margin-left: 0; padding: 30px 0}
+    .organList .depth-1_2 span {padding-bottom: 80px !important}
+    .organList > li {width: 100%; float: left;}
+
+    .servicePreface dd.btnArea a + a{margin-top:10px;}
+    .add_fac {padding: 20px}
+    .add_fac .img{position: relative; top: 0; left: 0; width: 100%}
+    .add_fac .cont {padding-left: 0; margin-top: 15px}
+
+
+    /* 시설대관 */
+    .facInfo {flex-wrap: wrap; flex-direction: column; align-items: baseline;}
+    .facInfo .cont .btn {right: 0; top: 0}
+    .facInfo .cont {width: 100%; margin-top: 20px}
+    .facInfo .img {width: 100%; height: auto}
+    .facInfo .cont .btn {transform: translateY(0);}
+}
+
+@media screen and (max-width: 999px) {
+    /* 시설대관 */
+    .facInfo .cont ul {width: 100%;}
+    .processList ul {padding: 30px 0px}
+    .processList.col-6 ul li {width: calc(33.33% - 30px);}
+    .processList.col-6 ul li:nth-child(n+4) {padding-top: 20px;}
+    .processList.col-6 ul li:nth-child(3)::after {display: none;}
+    .processList.col-6 ul li:nth-child(n+3)::after {margin-top: -6px;}
+}
+
+@media screen and (max-width:800px){
+    .loginWrap .checkArea a {width:calc(33.333% - 6px);margin-left:9px;font-size:1em;line-height:60px}
+    .loginWrap .checkArea a::before {width:46px;height:40px;margin-right:10px;background-position:0 -40px;background-size:200px}
+    .loginWrap .checkArea a:nth-of-type(2)::before {background-position:-46px -40px}
+    .loginWrap .checkArea a:nth-of-type(3)::before {background-position:-93px -40px}
+    .findArea .inpArea input {width:300px}
+    .pro_flex {flex-direction: column;}
+    .pro_flex .next01 {transform: rotate(90deg);}
+    .pro_flex > .txt_li {padding-left:0 !important;width:100% !important;}
+    .pro_flex li .txt{display: block !important;width: 100%;padding: 3%;margin:0;text-align:center !important;
+        margin:0 !important;box-sizing:border-box;height: auto !important;}
+
+    .process-list.col-5 > li,.process-list.col-6 > li {width:33.333%}
+
+    .processTxtWrap {margin-top: 7px; padding: 15px;}
+    .processTxt-list {margin-left: 0;}
+    .processTxt-list li {width: 100%; height: 60px; margin-left: 0;}
+    .processTxt-list li + li {margin-top: 30px;}
+    .processTxt-list li::before {transform: rotate(90deg); left: 50%; top: -30px; margin-top: 0; margin-left: -16px;}
+
+    /* My Page */
+    .menuShortcut li {width:50%}
+    .menuShortcut .tit {font-size:1.188em}
+    .keywordSetting .myKeyword {padding:55px 15px 10px}
+
+    .historyList dl {font-size:1em}
+    .organList .depth-1 > span {padding-bottom:115px}
+    .organList .depth-1 > span strong {width:130px;height:130px;font-size:1.188em}
+    .organList .depth-2 {margin-top:-85px}
+    .organList .depth-2 > li.sub strong {font-size:1.063em;line-height:45px}
+    .organList .depth-2 > li.sub + li {margin-top:40px}
+    .organList .depth-3 {font-size:0.875em}
+    .organList .depth-3 > li {padding-top:40px}
+    .organList .depth-3 > li::before {height:40px}
+    .organList .depth-3 > li strong {line-height:40px}
+    .mapSearchArea {padding:30px}
+    .mapSearchArea .title {font-size:1.250em}
+    .mapSearchArea .title + p {font-size:1.063em}
+    .mapSearchArea .bgmap {margin-top:-125px;padding:0;background:none}
+    .mapSearchArea .bgmap .map {height:250px}
+
+    /* 시설대관 */
+    .facInfo .cont .btn {width: 120px; height: 40px}
+
+
+}
+@media screen and (max-width:640px){
+    .loginGroup .loginArea {min-width:100%;padding-right:0}
+    .loginGroup .loginArea .btnLogin {position:relative;top:inherit;right:inherit;width:100%;margin-top:10px;line-height:50px}
+    .loginWrap .checkArea a {font-size:1.077em;line-height:45px}
+    .loginWrap .checkArea a::before {display:none}
+    .findArea .inpArea + .inpArea {margin-top:10px}
+    .findArea .inpArea input {width:100%}
+    .findArea .pass-wrapper {top:70px;left:0;margin-left:0}
+    .certifyWrap .certifyBox {float:none;width:auto;margin:-1px 0 0}
+    .certifyWrap .certifyBox + .certifyBox {margin-left:0}
+    .joinStep li .txt,.joinStep li .ico {margin:0}
+    .joinStep li .txt {display:block;margin-top:15px;line-height:1}
+
+    #sitemap > li > a {padding-left:30px}
+    #sitemap > li > ul {margin-left:30px}
+    #sitemap > li > ul > li {padding-left:0}
+    #sitemap > li > ul > li > a {display:inline-block;position:inherit;top:inherit;left:inherit}
+    #sitemap > li > ul ul {margin:5px 0 0 -40px}
+
+    .hopebookGuide {padding:10px 20px}
+    .hopebookGuide .process > li {float:none;width:auto;padding:0;padding-left:120px;text-align:left}
+    .hopebookGuide .process > li::after {display:none}
+    .hopebookGuide .process .ico {position:absolute;top:0;left:0;padding:6px}
+    .hopebookGuide .process .ico span {margin:5px;transform:scale(0.8)}
+    .hopebookGuide .process .txt {display:table-cell;height:94px;font-size:1em;vertical-align:middle}
+
+    /* My Page */
+    .myState li div {padding:12px 10px;line-height:1.3}
+    .myState li a {top:10px;right:10px}
+
+    .joinGuide .joinProcess {padding:10px}
+    .joinGuide .process li {width:33.333%}
+    .joinGuide .process li:nth-of-type(3n+1)::after {display:none}
+    .historyWrap {margin-left:20px}
+    .historyWrap::before {display:none}
+    .historyList::before {content:"";position:absolute;top:45px;left:0;height:100%;border-left:1px solid #e4e4e4}
+    .historyList li {padding-left:0}
+    .historyList li::before {left:0}
+    .historyList li strong {margin-bottom:10px;padding:5px 0 10px}
+    .historyList dl {margin-left:30px}
+    .historyList dt {float:left}
+    .historyList dd {margin-left:70px}
+    .greeting strong {font-size:1.357em}
+    .greeting img {width:200px}
+    .organList .depth-1 > span::before {margin-left:-1px}
+    .organList .depth-3 {font-size:1em}
+    .organList .depth-3 > li {width:33.333%;height:256px}
+    .organList .depth-3 > li:nth-of-type(3)::after {content:"";position:absolute;top:-1px;right:-1px;width:50%;height:2px;background-color:#fff}
+    .organList .depth-3 > li:nth-of-type(5)::after,.organList .depth-3 > li:nth-of-type(1n+4)::before {display:none}
+    .mapSearchArea .libSearchArea {display:block}
+    .mapSearchArea .bgmap {display:none}
+
+    .locationMap .info {padding-left:100px}
+    .locationMap .info::before {left:20px}
+
+    .onlineService {padding:30px;background-image:none !important}
+    .servicePreface dd.btnArea a {margin:0 auto;line-height:40px}
+
+
+    .add_fac .img img{width: 100%}
+    .add_fac .cont {margin-top: 10px}
+
+    /* 시설대관 */
+    .processList ul li {height: 120px;}
+    .processList ul li div {width: 100px; height: 100px;}
+    .processList ul li::before {width: 120px; height: 120px;}
+    .processList ul li::after {right: -10px}
+    .processList.col-6 ul li {width: calc(50% - 30px);}
+    .processList.col-6 ul li:nth-child(3) {padding-top: 20px;}
+    .processList.col-6 ul li:nth-child(2)::after {display: none;}
+    .processList.col-6 ul li:nth-child(3)::after {display: block;}
+}
+@media screen and (max-width:480px){
+    .loginGroup .desc {text-align:left}
+    .loginGroup .loginArea {padding-right:0}
+    .loginGroup .loginArea .btnLogin {position:relative;top:auto;right:auto;width:100%;margin-top:8px;line-height:36px}
+    .findForm .btnArea .btn {min-width:100px}
+    .findForm + .identifyForm dd {min-width:auto}
+    .joinStep li .ico::before {width:40px;height:40px;background-size:200px auto}
+    .joinStep li:nth-of-type(2) .ico::before {background-position:-40px 0}
+    .joinStep li:nth-of-type(3) .ico::before {background-position:-80px 0}
+    .joinStep li:nth-of-type(4) .ico::before {background-position:-120px 0}
+
+    .organList .depth-3 > li {width:50%}
+
+    .process-list > li {width:50% !important;padding:0 20px}
+    .process-list > li:nth-of-type(odd)::after {display:none}
+    .process-list.col-3 > li {float:none;width:auto !important}
+
+    /* My Page */
+    .myInfoBox .title {font-size:1em}
+    .myState li {width:50%;margin-bottom:5px}
+    .menuShortcut li a {padding:15px}
+    .menuShortcut .tit {font-size:1.077em}
+    .menuShortcut .txt {min-height:66px;font-size:0.923em}
+
+    .greeting img {float:left;width:150px;margin:0 15px 5px 0}
+    .organList .depth-2 > li.sub span {width:40%;margin-right:0;padding:0}
+    .organList .depth-3 > li:nth-of-type(1n+3) {height:212px}
+    .organList .depth-3 > li:nth-of-type(2)::after {content:"";position:absolute;top:-1px;right:-1px;width:50%;height:2px;background-color:#fff}
+    .organList .depth-3 > li:nth-of-type(1n+3)::after,.organList .depth-3 > li:nth-of-type(1n+3)::before {display:none}
+
+    .locationMap .info {padding:15px}
+    .locationMap .info::before {display:none}
+    .wrap_map {height:200px !important}
+
+
+    /* 시설대관 */
+    .calMonth .month {margin: 0 5px}
+    .timeList li {width: calc(100%/5 - 10px)}
+    .facInfo .cont .btn {width: 100px; height: 30px}
+    .calMonth a {width: 30px}
+
+
+}
+@media screen and (max-width:360px){
+    /* My Page */
+    .myInfoBox .myInfo {padding-left:15px}
+    .myInfoBox .myInfo .memType {position:relative;top:auto;left:auto;width:88px;margin:0 auto 15px}
+    .myInfoBox .myInfo .memType + .myInfoList {display:block;height:auto}
+    .myInfoBox .myInfo .myInfoList p {text-align:center}
+    .menuShortcut li {float:none;width:auto}
+    .menuShortcut .txt {min-height:auto}
+}
+@media screen and (min-width:640px){
+    .loginWrap,.loginForm {padding:50px}
+    .loginWrap {background-color:#f2f2f2}
+    .findArea {padding-right:120px}
+    .findArea .btnOk {position:absolute;top:0;right:0;width:110px;height:106px;margin-top:0;line-height:100px}
+    .findArea,.findArea .inpArea label,.findArea .inpArea input {display:inline-block}
+
+    .historyWrap::before {left:50%}
+    .historyList li:nth-child(odd) {padding-left:50%}
+    .historyList li:nth-child(odd) strong {padding-left:40px}
+    .historyList li:nth-child(odd) dl {margin-left:40px}
+    .historyList li:nth-child(odd) dt {float:left}
+    .historyList li:nth-child(odd) dd {margin-left:80px}
+    .historyList li:nth-child(even) {padding-right:50%;text-align:right}
+    .historyList li:nth-child(even) strong {padding-right:40px}
+    .historyList li:nth-child(even) dl {margin-right:40px}
+    .historyList li:nth-child(even) dt {float:right}
+    .historyList li:nth-child(even) dd {margin-right:80px}
+}
+@media screen and (min-width:1000px){
+    .loginGroup,.loginDesc {margin:0 30px}
+    .certifyWrap {padding:40px}
+    .certifyWrap .certifyBox {float:left;width:calc(100% / 2 - 20px)}
+    .certifyWrap .certifyBox + .certifyBox {margin-left:40px}
+    .memberType .certifyBox:first-child .desc {letter-spacing:0.025em}
+
+    .processWrap {padding:25px 40px}
+    .process-list > li {padding:0 31px}
+    .process-list .txt::before {width:70px;height:70px;background-size:auto}
+    .process-list.ico1 > li:nth-of-type(1) .txt::before {background-position:0 -120px}
+    .process-list.ico1 > li:nth-of-type(2) .txt::before {background-position:-70px -120px}
+    .process-list.ico1 > li:nth-of-type(3) .txt::before {background-position:-140px -120px}
+    .process-list.ico1 > li:nth-of-type(4) .txt::before {background-position:-210px -120px}
+    .process-list.ico2 > li:nth-of-type(1) .txt::before {background-position:0 -200px}
+    .process-list.ico2 > li:nth-of-type(2) .txt::before {background-position:-70px -200px}
+    .process-list.ico2 > li:nth-of-type(3) .txt::before {background-position:-140px -200px}
+    .process-list.ico2 > li:nth-of-type(4) .txt::before {background-position:-210px -200px}
+    .process-list.ico3 > li:nth-of-type(1) .txt::before {background-position:0 -280px}
+    .process-list.ico3 > li:nth-of-type(2) .txt::before {background-position:-70px -280px}
+    .process-list.ico3 > li:nth-of-type(3) .txt::before {background-position:-140px -280px}
+    .process-list.ico3 > li:nth-of-type(4) .txt::before {background-position:-210px -280px}
+
+    .hopebookGuide .process > li::after {top:59px;margin-top:0}
+    .hopebookGuide .process .ico span {margin:30px}
+
+    /*My Page*/
+    .myInfoBox {float:left;width:60%;height:285px}
+    .myInfoBox .btnModiry {top:22px;right:30px;padding:5px 10px}
+    .myInfoBox .title {padding:22px 50px}
+    .myInfoBox .myInfo {padding:35px;padding-left:150px}
+    .myInfoBox .myInfo .memType {left:30px}
+    .myInfoBox .myInfo .myInfoList li + li {margin-top:8px}
+    .myState {float:right;width:37%}
+    .myState li {float:none;width:100%}
+    .myState li + li {margin-top:5px}
+    .myState li div {margin:0;padding:20px 50px;line-height:28px}
+    .myState li div::before {content:"";display:inline-block;width:46px;height:28px;margin-right:15px;vertical-align:top;background:url(/include/image/common/ico_mypage.png) 0 0 no-repeat}
+    .myState li div .tit br {display:none}
+    .myState li a {top:18px;right:50px}
+
+    /*.organList .depth-2 > li.sub span {width:20%;margin-right:20%}*/
+
+    .organList .depth-3 {margin:0 -10px}
+    .organList .depth-3 > li {padding:60px 10px 0}
+    .mapSearchArea {min-height:280px;padding:80px;margin-bottom:40px}
+    .mapSearchArea .bgmap {right:40px}
+    .wrap_map {height:450px !important}
+
+    .onlineService {min-height:280px;padding:60px;padding-left:46.666%;background-position:3.333% 100%}
+    .servicePreface dd.desc {font-size:1.063em}
+
+    .floorTab {float:left;margin:0 10px 0 0}
+    .floorTab li {float:none;width:auto;margin:0 0 10px 0}
+    .floorTab li a {display:block;width:70px;padding:0}
+    .floorInfo .floorImg {text-align:center}
+    .floorInfo .floorImg img {display:inline-block;vertical-align:middle}
+}
